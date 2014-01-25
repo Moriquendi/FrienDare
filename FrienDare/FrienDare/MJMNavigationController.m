@@ -14,15 +14,10 @@
 
 @implementation MJMNavigationController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        self.navigationBar.backgroundColor = [UIColor colorWithRed:28./255.
-                                                             green:36./255.
-                                                              blue:43./255.
-                                                             alpha:1.];
+    if (self = [super init]) {
+
     }
     return self;
 }
@@ -30,6 +25,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    self.navigationBar.shadowImage = [UIImage new];
+    self.navigationBar.translucent = YES;
+    self.navigationBar.backgroundColor = [UIColor colorWithRed:28./255.
+                                                         green:36./255.
+                                                          blue:43./255.
+                                                         alpha:1.];
+    
+    self.navigationBar.tintColor = [UIColor lightGrayColor];
+
 	// Do any additional setup after loading the view.
 }
 
