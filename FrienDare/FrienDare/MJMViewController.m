@@ -10,6 +10,7 @@
 #import "MJMDareCardView.h"
 #import "MJMStyleSheet.h"
 #import "MJMChallenge.h"
+#import "MJMUser.h"
 
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <Firebase/Firebase.h>
@@ -22,6 +23,8 @@ UIActionSheetDelegate>
 @property (nonatomic, strong) UIScrollView *contentScrollView;
 
 @property (nonatomic, strong) NSArray *challenges;
+
+@property (nonatomic) NSUInteger selectedChallange;
 
 @end
 
@@ -57,6 +60,7 @@ UIActionSheetDelegate>
         dareCard.center = CGPointMake(self.view.bounds.size.width/2.f,
                                       self.view.bounds.size.height/2.f);
         dareCard.frame = CGRectOffset(dareCard.frame, self.view.bounds.size.width * i, 0);
+        dareCard.proveButton.tag = i;
         [dareCard.proveButton addTarget:self
                                  action:@selector(_takeProvePicture:)
                        forControlEvents:UIControlEventTouchUpInside];
@@ -72,7 +76,12 @@ UIActionSheetDelegate>
 
 - (void)_takeProvePicture:(UIButton *)sender
 {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:@"Take Photo", @"Choose From Library", nil];
+    self.selectedChallange = sender.tag;
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                                             delegate:self
+                                                    cancelButtonTitle:@"Cancel"
+                                               destructiveButtonTitle:nil
+                                                    otherButtonTitles:@"Take Photo", @"Choose From Library", nil];
     [actionSheet showInView:self.view];
 }
 
@@ -88,8 +97,10 @@ UIActionSheetDelegate>
         case 1:
             sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
             break;
+        default:
+            return;
     }
-    
+
     UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
     cameraUI.sourceType = sourceType;
     
@@ -130,7 +141,10 @@ UIActionSheetDelegate>
             imageToUse = originalImage;
         }
         
-        [self _addProveImageToChallenge:editedImage];
+        
+    [self _addProveImage:editedImage
+             toChallange:self.challenges[self.selectedChallange]
+                  byUser:[MJMUser currentUser]];
     }
     
     // Handle a movied picked from a photo album
@@ -139,18 +153,23 @@ UIActionSheetDelegate>
         
         NSURL *movieURL = [info objectForKey:
                                 UIImagePickerControllerMediaURL];
-        [self _addProveVideoToChallenge:[NSData dataWithContentsOfURL:movieURL]];
+        [self _addProveVideo:[NSData dataWithContentsOfURL:movieURL]
+                 toChallange:self.challenges[self.selectedChallange]
+                      byUser:[MJMUser currentUser]];
     }
 
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)_addProveImageToChallenge:(UIImage *)proveImage
+- (void)_addProveImage:(UIImage *)proveImage
+           toChallange:(MJMChallenge *)challange
+                byUser:(MJMUser *)user
 {
     // Called when user picked an image
 }
-
-- (void)_addProveVideoToChallenge:(NSData *)proveVideo
+- (void)_addProveVideo:(NSData *)proveImage
+           toChallange:(MJMChallenge *)challange
+                byUser:(MJMUser *)user
 {
     // Called when user picked a video
 }

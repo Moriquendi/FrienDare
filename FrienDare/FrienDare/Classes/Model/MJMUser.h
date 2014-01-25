@@ -1,5 +1,5 @@
 //
-//  MJMChallenge.h
+//  MJMUser.h
 //  FrienDare
 //
 //  Created by Michal Smialko on 1/25/14.
@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MJMChallenge : NSObject
+@interface MJMUser : NSObject
 
 @property (nonatomic, strong) NSNumber *ID;
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *description;
+
++ (instancetype)currentUser;
 
 @end

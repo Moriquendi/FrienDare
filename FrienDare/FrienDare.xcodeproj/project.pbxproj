@@ -32,6 +32,10 @@
 		902A5BA71893D409001D3832 /* MJMDareEditVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 902A5BA51893D409001D3832 /* MJMDareEditVC.xib */; };
 		902A5BA91893DD5B001D3832 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902A5BA81893DD5B001D3832 /* Firebase.framework */; };
 		90E6945B18943CD300330948 /* MJMChallenge.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E6945A18943CD300330948 /* MJMChallenge.m */; };
+		90E6945F1894422400330948 /* FrienDare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90E6945D1894422400330948 /* FrienDare.xcdatamodeld */; };
+		90E694621894427400330948 /* MJMModelLoaderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E694611894427400330948 /* MJMModelLoaderVC.m */; };
+		90E694651894458200330948 /* MJMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E694641894458200330948 /* MJMCoreDataManager.m */; };
+		90E694681894469B00330948 /* MJMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E694671894469B00330948 /* MJMUser.m */; };
 		E61FE8EB1893E08800A2925D /* MJMStyleSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FE8EA1893E08800A2925D /* MJMStyleSheet.m */; };
 		E61FE8EE1893EF0600A2925D /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E61FE8EC1893EF0600A2925D /* Raleway-Light.ttf */; };
 		E61FE8EF1893EF0600A2925D /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E61FE8ED1893EF0600A2925D /* Raleway-SemiBold.ttf */; };
@@ -83,6 +87,13 @@
 		902A5BA81893DD5B001D3832 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = FrienDare/Firebase.framework; sourceTree = "<group>"; };
 		90E6945918943CD300330948 /* MJMChallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJMChallenge.h; path = Classes/Model/MJMChallenge.h; sourceTree = "<group>"; };
 		90E6945A18943CD300330948 /* MJMChallenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJMChallenge.m; path = Classes/Model/MJMChallenge.m; sourceTree = "<group>"; };
+		90E6945E1894422400330948 /* FrienDare.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FrienDare.xcdatamodel; sourceTree = "<group>"; };
+		90E694601894427400330948 /* MJMModelLoaderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJMModelLoaderVC.h; path = Classes/Controllers/MJMModelLoaderVC.h; sourceTree = "<group>"; };
+		90E694611894427400330948 /* MJMModelLoaderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJMModelLoaderVC.m; path = Classes/Controllers/MJMModelLoaderVC.m; sourceTree = "<group>"; };
+		90E694631894458200330948 /* MJMCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJMCoreDataManager.h; path = Classes/Model/MJMCoreDataManager.h; sourceTree = "<group>"; };
+		90E694641894458200330948 /* MJMCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJMCoreDataManager.m; path = Classes/Model/MJMCoreDataManager.m; sourceTree = "<group>"; };
+		90E694661894469B00330948 /* MJMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJMUser.h; path = Classes/Model/MJMUser.h; sourceTree = "<group>"; };
+		90E694671894469B00330948 /* MJMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJMUser.m; path = Classes/Model/MJMUser.m; sourceTree = "<group>"; };
 		E61FE8E91893E08800A2925D /* MJMStyleSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMStyleSheet.h; sourceTree = "<group>"; };
 		E61FE8EA1893E08800A2925D /* MJMStyleSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMStyleSheet.m; sourceTree = "<group>"; };
 		E61FE8EC1893EF0600A2925D /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
@@ -183,6 +194,7 @@
 				902A5B691893A793001D3832 /* InfoPlist.strings */,
 				902A5B6C1893A793001D3832 /* main.m */,
 				902A5B6E1893A793001D3832 /* FrienDare-Prefix.pch */,
+				90E6945D1894422400330948 /* FrienDare.xcdatamodeld */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -225,6 +237,10 @@
 				902A5BA31893D409001D3832 /* MJMDareEditVC.h */,
 				902A5BA41893D409001D3832 /* MJMDareEditVC.m */,
 				902A5BA51893D409001D3832 /* MJMDareEditVC.xib */,
+				90E694601894427400330948 /* MJMModelLoaderVC.h */,
+				90E694611894427400330948 /* MJMModelLoaderVC.m */,
+				90E694631894458200330948 /* MJMCoreDataManager.h */,
+				90E694641894458200330948 /* MJMCoreDataManager.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -244,6 +260,8 @@
 			children = (
 				90E6945918943CD300330948 /* MJMChallenge.h */,
 				90E6945A18943CD300330948 /* MJMChallenge.m */,
+				90E694661894469B00330948 /* MJMUser.h */,
+				90E694671894469B00330948 /* MJMUser.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -356,7 +374,11 @@
 				902A5B6D1893A793001D3832 /* main.m in Sources */,
 				902A5B9C1893C284001D3832 /* MJMDareCardView.m in Sources */,
 				902A5B711893A793001D3832 /* MJMAppDelegate.m in Sources */,
+				90E694651894458200330948 /* MJMCoreDataManager.m in Sources */,
+				90E694681894469B00330948 /* MJMUser.m in Sources */,
 				E61FE8F21894051E00A2925D /* MJMNavigationController.m in Sources */,
+				90E6945F1894422400330948 /* FrienDare.xcdatamodeld in Sources */,
+				90E694621894427400330948 /* MJMModelLoaderVC.m in Sources */,
 				902A5B771893A793001D3832 /* MJMViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +610,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		90E6945D1894422400330948 /* FrienDare.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				90E6945E1894422400330948 /* FrienDare.xcdatamodel */,
+			);
+			currentVersion = 90E6945E1894422400330948 /* FrienDare.xcdatamodel */;
+			name = FrienDare.xcdatamodeld;
+			path = Classes/Model/FrienDare.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 902A5B551893A793001D3832 /* Project object */;
 }
