@@ -12,7 +12,6 @@
 		4B2D9EE81893D27900A11FA5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2D9EE71893D27900A11FA5 /* CFNetwork.framework */; };
 		4B2D9EEA1893D28100A11FA5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2D9EE91893D28100A11FA5 /* Security.framework */; };
 		4B2D9EEC1893D28A00A11FA5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2D9EEB1893D28A00A11FA5 /* SystemConfiguration.framework */; };
-		4B2D9EEE1893DC8D00A11FA5 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2D9EED1893DC8D00A11FA5 /* Firebase.framework */; };
 		902A5B611893A793001D3832 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902A5B601893A793001D3832 /* Foundation.framework */; };
 		902A5B631893A793001D3832 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902A5B621893A793001D3832 /* CoreGraphics.framework */; };
 		902A5B651893A793001D3832 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902A5B641893A793001D3832 /* UIKit.framework */; };
@@ -31,6 +30,7 @@
 		902A5B9F1893C4C2001D3832 /* MJMDareCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 902A5B9E1893C4C2001D3832 /* MJMDareCardView.xib */; };
 		902A5BA61893D409001D3832 /* MJMDareEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 902A5BA41893D409001D3832 /* MJMDareEditVC.m */; };
 		902A5BA71893D409001D3832 /* MJMDareEditVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 902A5BA51893D409001D3832 /* MJMDareEditVC.xib */; };
+		902A5BA91893DD5B001D3832 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902A5BA81893DD5B001D3832 /* Firebase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,6 @@
 		4B2D9EE71893D27900A11FA5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		4B2D9EE91893D28100A11FA5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4B2D9EEB1893D28A00A11FA5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		4B2D9EED1893DC8D00A11FA5 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = FrienDareTests/Firebase.framework; sourceTree = "<group>"; };
 		902A5B5D1893A793001D3832 /* FrienDare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrienDare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		902A5B601893A793001D3832 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		902A5B621893A793001D3832 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -75,6 +74,7 @@
 		902A5BA31893D409001D3832 /* MJMDareEditVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJMDareEditVC.h; path = Classes/MJMDareEditVC.h; sourceTree = "<group>"; };
 		902A5BA41893D409001D3832 /* MJMDareEditVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJMDareEditVC.m; path = Classes/MJMDareEditVC.m; sourceTree = "<group>"; };
 		902A5BA51893D409001D3832 /* MJMDareEditVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MJMDareEditVC.xib; path = Classes/MJMDareEditVC.xib; sourceTree = "<group>"; };
+		902A5BA81893DD5B001D3832 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = FrienDare/Firebase.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B2D9EEC1893D28A00A11FA5 /* SystemConfiguration.framework in Frameworks */,
-				4B2D9EEE1893DC8D00A11FA5 /* Firebase.framework in Frameworks */,
+				902A5BA91893DD5B001D3832 /* Firebase.framework in Frameworks */,
 				4B2D9EEA1893D28100A11FA5 /* Security.framework in Frameworks */,
 				4B2D9EE81893D27900A11FA5 /* CFNetwork.framework in Frameworks */,
 				4B2D9EE61893D27000A11FA5 /* libicucore.dylib in Frameworks */,
@@ -129,7 +129,7 @@
 		902A5B5F1893A793001D3832 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4B2D9EED1893DC8D00A11FA5 /* Firebase.framework */,
+				902A5BA81893DD5B001D3832 /* Firebase.framework */,
 				4B2D9EEB1893D28A00A11FA5 /* SystemConfiguration.framework */,
 				4B2D9EE91893D28100A11FA5 /* Security.framework */,
 				4B2D9EE71893D27900A11FA5 /* CFNetwork.framework */,
@@ -450,6 +450,7 @@
 					"$(inherited)",
 					/Users/jamiesookprasong/Downloads,
 					"/Users/jamiesookprasong/Google\\ Drive/GitHub/FrienDare/FrienDare/FrienDareTests",
+					/Users/Michal/Documents/Projects/FrienDare/FrienDare/FrienDare/FrienDare,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FrienDare/FrienDare-Prefix.pch";
@@ -469,6 +470,7 @@
 					"$(inherited)",
 					/Users/jamiesookprasong/Downloads,
 					"/Users/jamiesookprasong/Google\\ Drive/GitHub/FrienDare/FrienDare/FrienDareTests",
+					/Users/Michal/Documents/Projects/FrienDare/FrienDare/FrienDare/FrienDare,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FrienDare/FrienDare-Prefix.pch";
