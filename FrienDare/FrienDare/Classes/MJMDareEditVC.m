@@ -73,8 +73,7 @@
                           duration:(NSNumber *)duration
                        description:(NSString *)description
 {
-    Firebase* f = [[Firebase alloc] initWithUrl:@"https://friendare.firebaseio.com/"];
-    //Firebase* daresRef = [f childByAppendingPath:@"dares/"];
+    Firebase* f = [[Firebase alloc] initWithUrl:@"https://friendare.firebaseio.com/dares"];
     Firebase* daresRef = [f childByAppendingPath:title];
     //@([startDate timeIntervalSince1970])
     [daresRef setValue:@{
