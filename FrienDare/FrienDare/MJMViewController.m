@@ -9,6 +9,8 @@
 #import "MJMViewController.h"
 #import "MJMDareCardView.h"
 #import "MJMStyleSheet.h"
+#import "MJMChallenge.h"
+
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <Firebase/Firebase.h>
 
@@ -18,6 +20,8 @@ UIImagePickerControllerDelegate,
 UIActionSheetDelegate>
 
 @property (nonatomic, strong) UIScrollView *contentScrollView;
+
+@property (nonatomic, strong) NSArray *challenges;
 
 @end
 
@@ -29,16 +33,26 @@ UIActionSheetDelegate>
 
     self.view.backgroundColor = [[MJMStyleSheet sharedInstance] backgroundColor];
     
+    // Load challenges
     const NSInteger CARDS_COUNT = 5;
+    NSMutableArray *allChalenges = [[NSMutableArray alloc] init];
+    for (NSInteger i=0; i<CARDS_COUNT; i++) {
+        MJMChallenge *newChallenge = [[MJMChallenge alloc] init];
+        newChallenge.title = @"Title";
+        newChallenge.description = @"Description";
+        [allChalenges addObject:newChallenge];
+    }
+    self.challenges = [NSArray arrayWithArray:allChalenges];
     
     // Content scroll view
     self.contentScrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     self.contentScrollView.pagingEnabled = YES;
-    self.contentScrollView.contentSize = CGSizeMake(CARDS_COUNT * self.view.bounds.size.width, self.view.bounds.size.height);
+    self.contentScrollView.contentSize = CGSizeMake([self.challenges count] * self.view.bounds.size.width, self.view.bounds.size.height);
     [self.view addSubview:self.contentScrollView];
     
     // Add card views
-    for (NSInteger i=0; i<CARDS_COUNT; i++) {
+    for (NSInteger i=0; i<[self.challenges count]; i++) {
+        MJMChallenge *challenge = self.challenges[i];
         MJMDareCardView *dareCard = [[MJMDareCardView alloc] initWithFrame:CGRectMake(0, 0, 250, 360)];
         dareCard.center = CGPointMake(self.view.bounds.size.width/2.f,
                                       self.view.bounds.size.height/2.f);
@@ -46,6 +60,10 @@ UIActionSheetDelegate>
         [dareCard.proveButton addTarget:self
                                  action:@selector(_takeProvePicture:)
                        forControlEvents:UIControlEventTouchUpInside];
+        
+        dareCard.titleLabel.text = challenge.title;
+        dareCard.descriptionLabel.text = challenge.description;
+
         [self.contentScrollView addSubview:dareCard];
     }
 }
