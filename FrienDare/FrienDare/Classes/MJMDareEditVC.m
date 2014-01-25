@@ -59,7 +59,7 @@
     [self _doneButtonTappedWithTitle:title
                          prizeAmount:prizeAmount
                            startDate:[NSDate date]
-                             endDate:[NSDate dateWithTimeInterval:c100 sinceDate:[NSDate date]]
+                             endDate:[NSDate dateWithTimeInterval:100 sinceDate:[NSDate date]]
                             duration:duration
                          description:description];
     
