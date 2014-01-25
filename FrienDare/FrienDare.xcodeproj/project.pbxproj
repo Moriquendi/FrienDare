@@ -31,9 +31,9 @@
 		902A5BA61893D409001D3832 /* MJMDareEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 902A5BA41893D409001D3832 /* MJMDareEditVC.m */; };
 		902A5BA71893D409001D3832 /* MJMDareEditVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 902A5BA51893D409001D3832 /* MJMDareEditVC.xib */; };
 		902A5BA91893DD5B001D3832 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902A5BA81893DD5B001D3832 /* Firebase.framework */; };
-		9064371418944D1800249813 /* sliderThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 9064371318944D1800249813 /* sliderThumb.png */; };
-		90B77DBC1894640B002B452F /* dollar.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B77DBA1894640B002B452F /* dollar.png */; };
-		90B77DBD1894640B002B452F /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B77DBB1894640B002B452F /* clock.png */; };
+		90B77DC118947018002B452F /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B77DBE18947018002B452F /* clock.png */; };
+		90B77DC218947018002B452F /* dollar.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B77DBF18947018002B452F /* dollar.png */; };
+		90B77DC318947018002B452F /* sliderThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B77DC018947018002B452F /* sliderThumb.png */; };
 		90E6945B18943CD300330948 /* MJMChallenge.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E6945A18943CD300330948 /* MJMChallenge.m */; };
 		90E6945F1894422400330948 /* FrienDare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90E6945D1894422400330948 /* FrienDare.xcdatamodeld */; };
 		90E694621894427400330948 /* MJMModelLoaderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E694611894427400330948 /* MJMModelLoaderVC.m */; };
@@ -89,9 +89,9 @@
 		902A5BA41893D409001D3832 /* MJMDareEditVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJMDareEditVC.m; path = Classes/MJMDareEditVC.m; sourceTree = "<group>"; };
 		902A5BA51893D409001D3832 /* MJMDareEditVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MJMDareEditVC.xib; path = Classes/MJMDareEditVC.xib; sourceTree = "<group>"; };
 		902A5BA81893DD5B001D3832 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = FrienDare/Firebase.framework; sourceTree = "<group>"; };
-		9064371318944D1800249813 /* sliderThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sliderThumb.png; path = ../../../../../../Desktop/sliderThumb.png; sourceTree = "<group>"; };
-		90B77DBA1894640B002B452F /* dollar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dollar.png; path = ../../../../../../Desktop/dollar.png; sourceTree = "<group>"; };
-		90B77DBB1894640B002B452F /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clock.png; path = ../../../../../../Desktop/clock.png; sourceTree = "<group>"; };
+		90B77DBE18947018002B452F /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
+		90B77DBF18947018002B452F /* dollar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dollar.png; sourceTree = "<group>"; };
+		90B77DC018947018002B452F /* sliderThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderThumb.png; sourceTree = "<group>"; };
 		90E6945918943CD300330948 /* MJMChallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJMChallenge.h; path = Classes/Model/MJMChallenge.h; sourceTree = "<group>"; };
 		90E6945A18943CD300330948 /* MJMChallenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJMChallenge.m; path = Classes/Model/MJMChallenge.m; sourceTree = "<group>"; };
 		90E6945E1894422400330948 /* FrienDare.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FrienDare.xcdatamodel; sourceTree = "<group>"; };
@@ -195,9 +195,9 @@
 		902A5B671893A793001D3832 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				90B77DBA1894640B002B452F /* dollar.png */,
-				90B77DBB1894640B002B452F /* clock.png */,
-				9064371318944D1800249813 /* sliderThumb.png */,
+				90B77DBE18947018002B452F /* clock.png */,
+				90B77DBF18947018002B452F /* dollar.png */,
+				90B77DC018947018002B452F /* sliderThumb.png */,
 				90E69469189449C300330948 /* doge.png */,
 				E61FE8F318943C7E00A2925D /* fontawesome-webfont.ttf */,
 				E61FE8EC1893EF0600A2925D /* Raleway-Light.ttf */,
@@ -354,16 +354,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90B77DBD1894640B002B452F /* clock.png in Resources */,
 				902A5BA71893D409001D3832 /* MJMDareEditVC.xib in Resources */,
+				90B77DC318947018002B452F /* sliderThumb.png in Resources */,
 				902A5B791893A793001D3832 /* Images.xcassets in Resources */,
-				9064371418944D1800249813 /* sliderThumb.png in Resources */,
 				90E6946A189449C300330948 /* doge.png in Resources */,
 				902A5B9F1893C4C2001D3832 /* MJMDareCardView.xib in Resources */,
 				E61FE8EE1893EF0600A2925D /* Raleway-Light.ttf in Resources */,
-				90B77DBC1894640B002B452F /* dollar.png in Resources */,
 				902A5B6B1893A793001D3832 /* InfoPlist.strings in Resources */,
+				90B77DC118947018002B452F /* clock.png in Resources */,
 				E61FE8F418943C7E00A2925D /* fontawesome-webfont.ttf in Resources */,
+				90B77DC218947018002B452F /* dollar.png in Resources */,
 				902A5B741893A793001D3832 /* Main.storyboard in Resources */,
 				E61FE8EF1893EF0600A2925D /* Raleway-SemiBold.ttf in Resources */,
 			);
