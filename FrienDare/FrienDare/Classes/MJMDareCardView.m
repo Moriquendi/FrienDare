@@ -7,6 +7,7 @@
 //
 
 #import "MJMDareCardView.h"
+#import "MJMStyleSheet.h"
 
 @interface MJMDareCardView ()
 @property (nonatomic, strong, readwrite) UILabel *prizeAmountLabel;
@@ -23,6 +24,7 @@
         self.layer.borderColor = [[UIColor lightGrayColor] CGColor];
         self.layer.borderWidth = 1.f;
         self.clipsToBounds = YES;
+        self.proveButton.backgroundColor = [[MJMStyleSheet sharedInstance] proveButtonBackgroundColor];
     }
     return self;
 }

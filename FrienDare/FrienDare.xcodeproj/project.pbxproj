@@ -34,6 +34,7 @@
 		E61FE8EB1893E08800A2925D /* MJMStyleSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FE8EA1893E08800A2925D /* MJMStyleSheet.m */; };
 		E61FE8EE1893EF0600A2925D /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E61FE8EC1893EF0600A2925D /* Raleway-Light.ttf */; };
 		E61FE8EF1893EF0600A2925D /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E61FE8ED1893EF0600A2925D /* Raleway-SemiBold.ttf */; };
+		E61FE8F21894051E00A2925D /* MJMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FE8F11894051E00A2925D /* MJMNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		E61FE8EA1893E08800A2925D /* MJMStyleSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMStyleSheet.m; sourceTree = "<group>"; };
 		E61FE8EC1893EF0600A2925D /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
 		E61FE8ED1893EF0600A2925D /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		E61FE8F01894051E00A2925D /* MJMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMNavigationController.h; sourceTree = "<group>"; };
+		E61FE8F11894051E00A2925D /* MJMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +211,8 @@
 		902A5B991893A843001D3832 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E61FE8F01894051E00A2925D /* MJMNavigationController.h */,
+				E61FE8F11894051E00A2925D /* MJMNavigationController.m */,
 				902A5B751893A793001D3832 /* MJMViewController.h */,
 				902A5B761893A793001D3832 /* MJMViewController.m */,
 				902A5BA31893D409001D3832 /* MJMDareEditVC.h */,
@@ -333,6 +338,7 @@
 				902A5B6D1893A793001D3832 /* main.m in Sources */,
 				902A5B9C1893C284001D3832 /* MJMDareCardView.m in Sources */,
 				902A5B711893A793001D3832 /* MJMAppDelegate.m in Sources */,
+				E61FE8F21894051E00A2925D /* MJMNavigationController.m in Sources */,
 				902A5B771893A793001D3832 /* MJMViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
