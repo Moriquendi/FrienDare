@@ -77,6 +77,12 @@ UIActionSheetDelegate>
 - (void)_takeProvePicture:(UIButton *)sender
 {
     self.selectedChallange = sender.tag;
+    
+    [self _addProveImage:[UIImage imageNamed:@"doge"]
+             toChallange:self.challenges[self.selectedChallange]
+                  byUser:[MJMUser currentUser]];
+    return;
+    
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                                              delegate:self
                                                     cancelButtonTitle:@"Cancel"
