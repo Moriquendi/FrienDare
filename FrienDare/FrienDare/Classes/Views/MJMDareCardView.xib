@@ -89,7 +89,11 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+<<<<<<< HEAD
                 <outlet property="proveButton" destination="gcY-Xb-He5" id="vnh-qW-ans"/>
+=======
+                <outlet property="proveButton" destination="gcY-Xb-He5" id="agS-mQ-iMP"/>
+>>>>>>> Added VC to take/choose picture/video.
             </connections>
         </view>
     </objects>

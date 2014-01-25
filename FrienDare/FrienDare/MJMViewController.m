@@ -9,12 +9,13 @@
 #import "MJMViewController.h"
 #import "MJMDareCardView.h"
 #import "MJMStyleSheet.h"
-
+#import <MobileCoreServices/MobileCoreServices.h>
 #import <Firebase/Firebase.h>
 
 @interface MJMViewController () <
 UINavigationControllerDelegate,
-UIImagePickerControllerDelegate>
+UIImagePickerControllerDelegate,
+UIActionSheetDelegate>
 
 @property (nonatomic, strong) UIScrollView *contentScrollView;
 
@@ -53,14 +54,31 @@ UIImagePickerControllerDelegate>
 
 - (void)_takeProvePicture:(UIButton *)sender
 {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:@"Take Photo", @"Choose From Library", nil];
+    [actionSheet showInView:self.view];
+}
+
+#pragma mark - <UIActionSheetDelegate>
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    UIImagePickerControllerSourceType sourceType;
+    switch (buttonIndex) {
+        case 0:
+            sourceType = UIImagePickerControllerSourceTypeCamera;
+            break;
+        case 1:
+            sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            break;
+    }
+    
     UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
-    cameraUI.sourceType = UIImagePickerControllerSourceTypeCamera;
+    cameraUI.sourceType = sourceType;
     
     // Displays a control that allows the user to choose picture or
     // movie capture, if both are available:
     cameraUI.mediaTypes =
-    [UIImagePickerController availableMediaTypesForSourceType:
-     UIImagePickerControllerSourceTypeCamera];
+    [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
     
     // Hides the controls for moving & scaling pictures, or for
     // trimming movies. To instead show the controls, use YES.
@@ -71,5 +89,53 @@ UIImagePickerControllerDelegate>
                        animated:YES
                      completion:nil];
 }
+
+#pragma mark - <UIImagePickerControllerDelegate>
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
+    UIImage *originalImage, *editedImage, *imageToUse;
+    
+    // Handle a still image picked from a photo album
+    if (CFStringCompare ((CFStringRef) mediaType, kUTTypeImage, 0)
+        == kCFCompareEqualTo) {
+        
+        editedImage = (UIImage *) [info objectForKey:
+                                   UIImagePickerControllerEditedImage];
+        originalImage = (UIImage *) [info objectForKey:
+                                     UIImagePickerControllerOriginalImage];
+        
+        if (editedImage) {
+            imageToUse = editedImage;
+        } else {
+            imageToUse = originalImage;
+        }
+        
+        [self _addProveImageToChallenge:editedImage];
+    }
+    
+    // Handle a movied picked from a photo album
+    if (CFStringCompare ((CFStringRef) mediaType, kUTTypeMovie, 0)
+        == kCFCompareEqualTo) {
+        
+        NSURL *movieURL = [info objectForKey:
+                                UIImagePickerControllerMediaURL];
+        [self _addProveVideoToChallenge:[NSData dataWithContentsOfURL:movieURL]];
+    }
+
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)_addProveImageToChallenge:(UIImage *)proveImage
+{
+    // Called when user picked an image
+}
+
+- (void)_addProveVideoToChallenge:(NSData *)proveVideo
+{
+    // Called when user picked a video
+}
+
 
 @end
