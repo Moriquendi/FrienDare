@@ -35,6 +35,8 @@
         UINib *nib = [UINib nibWithNibName:@"MJMDareEditVC" bundle:nil];
         NSArray *nibObjects = [nib instantiateWithOwner:self options:nil];
         self.view = nibObjects.lastObject;
+        
+        self.title = @"New Dare";
     }
     return self;
 }
