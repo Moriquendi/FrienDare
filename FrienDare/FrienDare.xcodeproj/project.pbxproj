@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B2D9EE21893D1F700A11FA5 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2D9EE11893D1F700A11FA5 /* Firebase.framework */; };
+		4B2D9EE41893D26200A11FA5 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2D9EE31893D26200A11FA5 /* libc++.dylib */; };
+		4B2D9EE61893D27000A11FA5 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2D9EE51893D27000A11FA5 /* libicucore.dylib */; };
+		4B2D9EE81893D27900A11FA5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2D9EE71893D27900A11FA5 /* CFNetwork.framework */; };
+		4B2D9EEA1893D28100A11FA5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2D9EE91893D28100A11FA5 /* Security.framework */; };
+		4B2D9EEC1893D28A00A11FA5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2D9EEB1893D28A00A11FA5 /* SystemConfiguration.framework */; };
 		902A5B611893A793001D3832 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902A5B601893A793001D3832 /* Foundation.framework */; };
 		902A5B631893A793001D3832 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902A5B621893A793001D3832 /* CoreGraphics.framework */; };
 		902A5B651893A793001D3832 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902A5B641893A793001D3832 /* UIKit.framework */; };
@@ -36,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B2D9EE11893D1F700A11FA5 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = ../../../../Downloads/Firebase.framework; sourceTree = "<group>"; };
+		4B2D9EE31893D26200A11FA5 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		4B2D9EE51893D27000A11FA5 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		4B2D9EE71893D27900A11FA5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		4B2D9EE91893D28100A11FA5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4B2D9EEB1893D28A00A11FA5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		902A5B5D1893A793001D3832 /* FrienDare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrienDare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		902A5B601893A793001D3832 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		902A5B621893A793001D3832 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -65,9 +77,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B2D9EEC1893D28A00A11FA5 /* SystemConfiguration.framework in Frameworks */,
+				4B2D9EEA1893D28100A11FA5 /* Security.framework in Frameworks */,
+				4B2D9EE81893D27900A11FA5 /* CFNetwork.framework in Frameworks */,
+				4B2D9EE61893D27000A11FA5 /* libicucore.dylib in Frameworks */,
+				4B2D9EE41893D26200A11FA5 /* libc++.dylib in Frameworks */,
 				902A5B631893A793001D3832 /* CoreGraphics.framework in Frameworks */,
 				902A5B651893A793001D3832 /* UIKit.framework in Frameworks */,
 				902A5B611893A793001D3832 /* Foundation.framework in Frameworks */,
+				4B2D9EE21893D1F700A11FA5 /* Firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +124,12 @@
 		902A5B5F1893A793001D3832 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B2D9EEB1893D28A00A11FA5 /* SystemConfiguration.framework */,
+				4B2D9EE91893D28100A11FA5 /* Security.framework */,
+				4B2D9EE71893D27900A11FA5 /* CFNetwork.framework */,
+				4B2D9EE51893D27000A11FA5 /* libicucore.dylib */,
+				4B2D9EE31893D26200A11FA5 /* libc++.dylib */,
+				4B2D9EE11893D1F700A11FA5 /* Firebase.framework */,
 				902A5B601893A793001D3832 /* Foundation.framework */,
 				902A5B621893A793001D3832 /* CoreGraphics.framework */,
 				902A5B641893A793001D3832 /* UIKit.framework */,
@@ -412,9 +436,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jamiesookprasong/Downloads,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FrienDare/FrienDare-Prefix.pch";
 				INFOPLIST_FILE = "FrienDare/FrienDare-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -425,9 +454,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jamiesookprasong/Downloads,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FrienDare/FrienDare-Prefix.pch";
 				INFOPLIST_FILE = "FrienDare/FrienDare-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -494,6 +528,7 @@
 				902A5B911893A793001D3832 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		902A5B921893A793001D3832 /* Build configuration list for PBXNativeTarget "FrienDareTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +537,7 @@
 				902A5B941893A793001D3832 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

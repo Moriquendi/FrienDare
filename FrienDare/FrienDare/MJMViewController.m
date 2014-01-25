@@ -8,6 +8,7 @@
 
 #import "MJMViewController.h"
 #import "MJMDareCardView.h"
+#import <Firebase/Firebase.h>
 
 @interface MJMViewController ()
 
