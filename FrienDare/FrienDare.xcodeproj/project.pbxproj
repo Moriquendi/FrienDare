@@ -115,8 +115,7 @@
 				902A5B6F1893A793001D3832 /* MJMAppDelegate.h */,
 				902A5B701893A793001D3832 /* MJMAppDelegate.m */,
 				902A5B721893A793001D3832 /* Main.storyboard */,
-				902A5B751893A793001D3832 /* MJMViewController.h */,
-				902A5B761893A793001D3832 /* MJMViewController.m */,
+				902A5B981893A838001D3832 /* Classes */,
 				902A5B781893A793001D3832 /* Images.xcassets */,
 				902A5B671893A793001D3832 /* Supporting Files */,
 			);
@@ -150,6 +149,23 @@
 				902A5B881893A793001D3832 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		902A5B981893A838001D3832 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				902A5B991893A843001D3832 /* Controllers */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		902A5B991893A843001D3832 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				902A5B751893A793001D3832 /* MJMViewController.h */,
+				902A5B761893A793001D3832 /* MJMViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
