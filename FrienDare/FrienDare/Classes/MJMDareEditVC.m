@@ -7,6 +7,7 @@
 //
 
 #import "MJMDareEditVC.h"
+#import "MJMChallenge.h"
 
 @interface MJMDareEditVC ()
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
@@ -72,7 +73,7 @@
                           duration:(NSNumber *)duration
                        description:(NSString *)description
 {
-    
+    [MJMChallenge createOrUpdate:@{@"objID": @5}];
 }
 
 @end
