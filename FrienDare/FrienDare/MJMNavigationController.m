@@ -7,6 +7,7 @@
 //
 
 #import "MJMNavigationController.h"
+#import "MJMStyleSheet.h"
 
 @interface MJMNavigationController ()
 
@@ -25,18 +26,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-    self.navigationBar.shadowImage = [UIImage new];
-    self.navigationBar.translucent = YES;
-    self.navigationBar.backgroundColor = [UIColor colorWithRed:28./255.
-                                                         green:36./255.
-                                                          blue:43./255.
-                                                         alpha:1.];
-    
-    self.navigationBar.tintColor = [UIColor lightGrayColor];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:28./255.
+                                            green:36./255.
+                                             blue:43./255.
+                                            alpha:1.]];
 
-	// Do any additional setup after loading the view.
+    self.navigationBar.translucent = YES;
+    self.navigationBar.tintColor = [UIColor colorWithWhite:190./255. alpha:1.];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
 }
 
 - (void)didReceiveMemoryWarning
