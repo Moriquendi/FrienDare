@@ -107,7 +107,7 @@
                          @"title": title,
                          @"prizeAmount": prizeAmount,
                          @"duration": duration,
-                         @"description": description
+                         @"challengeDescription": description
                          }];
     
     NSString* pushedDareName = newDarePushRef.name;
@@ -118,7 +118,7 @@
                                                                  @"title": title,
                                                                  @"prizeAmount": prizeAmount,
                                                                  @"duration": duration,
-                                                                 @"description": description
+                                                                 @"challengeDescription": description
                                                                  }];
     }];
 
