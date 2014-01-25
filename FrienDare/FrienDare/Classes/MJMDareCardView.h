@@ -11,5 +11,6 @@
 @interface MJMDareCardView : UIView
 
 @property (nonatomic, strong, readonly) UILabel *prizeAmountLabel;
+@property (weak, nonatomic) IBOutlet UIButton *proveButton;
 
 @end

@@ -10,8 +10,6 @@
 
 @interface MJMDareCardView ()
 @property (nonatomic, strong, readwrite) UILabel *prizeAmountLabel;
-
-@property (nonatomic, strong) UIButton *proveButton;
 @end
 
 @implementation MJMDareCardView

@@ -10,7 +10,9 @@
 #import "MJMDareCardView.h"
 #import <Firebase/Firebase.h>
 
-@interface MJMViewController ()
+@interface MJMViewController () <
+UINavigationControllerDelegate,
+UIImagePickerControllerDelegate>
 
 @property (nonatomic, strong) UIScrollView *contentScrollView;
 
@@ -36,10 +38,34 @@
         dareCard.center = CGPointMake(self.view.bounds.size.width/2.f,
                                       self.view.bounds.size.height/2.f);
         dareCard.frame = CGRectOffset(dareCard.frame, self.view.bounds.size.width * i, 0);
+        [dareCard.proveButton addTarget:self
+                                 action:@selector(_takeProvePicture:)
+                       forControlEvents:UIControlEventTouchUpInside];
         [self.contentScrollView addSubview:dareCard];
     }
-    
 }
 
+#pragma mark - MJMViewController
+
+- (void)_takeProvePicture:(UIButton *)sender
+{
+    UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
+    cameraUI.sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    // Displays a control that allows the user to choose picture or
+    // movie capture, if both are available:
+    cameraUI.mediaTypes =
+    [UIImagePickerController availableMediaTypesForSourceType:
+     UIImagePickerControllerSourceTypeCamera];
+    
+    // Hides the controls for moving & scaling pictures, or for
+    // trimming movies. To instead show the controls, use YES.
+    cameraUI.allowsEditing = NO;
+    cameraUI.delegate = self;
+    
+    [self presentViewController:cameraUI
+                       animated:YES
+                     completion:nil];
+}
 
 @end

@@ -80,6 +80,9 @@
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="proveButton" destination="gcY-Xb-He5" id="WAx-aA-292"/>
+            </connections>
         </view>
     </objects>
 </document>
