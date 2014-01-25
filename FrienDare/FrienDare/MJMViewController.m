@@ -8,6 +8,8 @@
 
 #import "MJMViewController.h"
 #import "MJMDareCardView.h"
+#import "MJMStyleSheet.h"
+
 #import <Firebase/Firebase.h>
 
 @interface MJMViewController () <
@@ -24,6 +26,8 @@ UIImagePickerControllerDelegate>
 {
     [super viewDidLoad];
 
+    self.view.backgroundColor = [[MJMStyleSheet sharedInstance] backgroundColor];
+    
     const NSInteger CARDS_COUNT = 5;
     
     // Content scroll view
@@ -41,6 +45,7 @@ UIImagePickerControllerDelegate>
         [dareCard.proveButton addTarget:self
                                  action:@selector(_takeProvePicture:)
                        forControlEvents:UIControlEventTouchUpInside];
+        dareCard.proveButton.backgroundColor = [[MJMStyleSheet sharedInstance] proveButtonBackgroundColor];
         [self.contentScrollView addSubview:dareCard];
     }
 }
