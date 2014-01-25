@@ -50,7 +50,10 @@
 
 - (void)_applyAppearanceProxies
 {
-//    [UISlider appearance] set
+    [[UISlider appearance] setThumbImage:[UIImage imageNamed:@"sliderThumb"]
+                              forState:UIControlStateNormal];
+    [[UISlider appearance] setThumbImage:[UIImage imageNamed:@"sliderThumb"]
+                              forState:UIControlStateHighlighted];
 }
 
 #pragma mark Colors

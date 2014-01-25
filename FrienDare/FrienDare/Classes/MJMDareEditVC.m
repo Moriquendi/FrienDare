@@ -13,10 +13,16 @@
 @interface MJMDareEditVC ()
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextField *priceAmountTextField;
-@property (weak, nonatomic) IBOutlet UIStepper *durationSteppter;
+
+
+
+@property (weak, nonatomic) IBOutlet UISlider *durationSlider;
+@property (weak, nonatomic) IBOutlet UISlider *prizeAmountSlider;
+
 @property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
 
 @property (weak, nonatomic) IBOutlet UILabel *durationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *amountLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *contentScrollView;
 
 @end
@@ -46,16 +52,33 @@
 
 #pragma mark - MJMDareEditVC
 
-- (IBAction)stepperDidUpdate:(id)sender
+- (IBAction)durationSliderDidUpdate:(id)sender
 {
-    self.durationLabel.text = [NSString stringWithFormat:@"Duration %ih", (NSInteger)self.durationSteppter.value];
+    self.durationLabel.text = [NSString stringWithFormat:@"%ih", (int)(self.durationSlider.value)];
+    
+    // Move duratoin with prize amount
+    CGFloat maxOffset = self.durationSlider.frame.size.width - self.durationSlider.frame.origin.x - self.durationLabel.frame.size.width/2.f;
+    self.durationLabel.center = CGPointMake(self.durationSlider.frame.origin.x +
+                                          self.durationLabel.frame.size.width/2.f +
+                                          maxOffset * self.durationSlider.value / self.durationSlider.maximumValue, self.durationLabel.center.y);
+}
+
+- (IBAction)prizeAmountDidUpdate:(id)sender
+{
+    self.amountLabel.text = [NSString stringWithFormat:@"$%i", (int)(self.prizeAmountSlider.value)];
+
+    // Move label with prize amount
+    CGFloat maxOffset = self.prizeAmountSlider.frame.size.width - self.prizeAmountSlider.frame.origin.x - self.amountLabel.frame.size.width/2.f;
+    self.amountLabel.center = CGPointMake(self.prizeAmountSlider.frame.origin.x +
+                                          self.amountLabel.frame.size.width/2.f +
+                                          maxOffset * self.prizeAmountSlider.value / self.prizeAmountSlider.maximumValue, self.amountLabel.center.y);
 }
 
 - (IBAction)doneButtonTapped:(id)sender
 {
     NSString *title = self.titleTextField.text;
-    NSNumber *prizeAmount = @([self.priceAmountTextField.text integerValue]);
-    NSNumber *duration = @(self.durationSteppter.value);
+    NSNumber *prizeAmount = @(self.prizeAmountSlider.value);
+    NSNumber *duration = @(self.durationSlider.value);
     NSString *description = self.descriptionTextField.text;
     
     [self _doneButtonTappedWithTitle:title

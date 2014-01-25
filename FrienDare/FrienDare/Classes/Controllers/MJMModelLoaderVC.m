@@ -10,6 +10,8 @@
 #import "MJMCoreDataManager.h"
 #import <Firebase/Firebase.h>
 
+#import "MJMStyleSheet.h"
+
 @interface MJMModelLoaderVC ()
 
 @end
@@ -20,6 +22,8 @@
 {
     [super viewDidAppear:animated];
 
+    [MJMStyleSheet sharedInstance]; // just configure appearance proxies
+    
     [[MJMCoreDataManager sharedInstance] initModelWithCompletionHandler:^{
        
         Firebase* f = [[Firebase alloc] initWithUrl:@"https://friendare.firebaseio.com/dares"];

@@ -23,7 +23,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Kea-FO-rqa" kind="modal" id="Y70-QK-5cj"/>
+                                    <segue destination="Kea-FO-rqa" kind="push" id="Y70-QK-5cj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg1-TI-8jf">
@@ -33,16 +33,17 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="B0X-OM-jBg" kind="modal" id="d6X-ub-z2w"/>
+                                    <segue destination="B0X-OM-jBg" kind="push" id="d6X-ub-z2w"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="WzE-Ns-E7S"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="695" y="121"/>
+            <point key="canvasLocation" x="1221" y="121"/>
         </scene>
         <!--Model LoaderVC-->
         <scene sceneID="ETM-yL-hnI">
@@ -58,7 +59,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="showFirstVC" id="GzC-io-Xge"/>
+                        <segue destination="ibi-8z-lid" kind="modal" identifier="showFirstVC" id="GzC-io-Xge"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cIo-7Z-k1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -82,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTS-Ik-X1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1266" y="486"/>
+            <point key="canvasLocation" x="1792" y="486"/>
         </scene>
         <!--Dare EditVC-->
         <scene sceneID="Ifq-yw-ulB">
@@ -101,7 +102,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Qh-n5-pey" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1283" y="-188"/>
+            <point key="canvasLocation" x="1809" y="-188"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2ke-9D-Lik">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ibi-8z-lid" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8bD-zR-dLg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="8qN-Y7-spg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kBj-wA-wP5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="695" y="121"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
