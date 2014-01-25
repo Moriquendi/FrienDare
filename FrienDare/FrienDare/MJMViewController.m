@@ -8,6 +8,8 @@
 
 #import "MJMViewController.h"
 #import "MJMDareCardView.h"
+#import "MJMStyleSheet.h"
+
 #import <Firebase/Firebase.h>
 
 @interface MJMViewController () <
@@ -24,6 +26,8 @@ UIImagePickerControllerDelegate>
 {
     [super viewDidLoad];
 
+    self.view.backgroundColor = [[MJMStyleSheet sharedInstance] backgroundColor];
+    
     const NSInteger CARDS_COUNT = 5;
     
     // Content scroll view

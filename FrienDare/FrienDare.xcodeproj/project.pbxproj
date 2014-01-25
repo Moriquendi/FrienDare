@@ -31,6 +31,10 @@
 		902A5BA61893D409001D3832 /* MJMDareEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 902A5BA41893D409001D3832 /* MJMDareEditVC.m */; };
 		902A5BA71893D409001D3832 /* MJMDareEditVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 902A5BA51893D409001D3832 /* MJMDareEditVC.xib */; };
 		902A5BA91893DD5B001D3832 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902A5BA81893DD5B001D3832 /* Firebase.framework */; };
+		E61FE8EB1893E08800A2925D /* MJMStyleSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FE8EA1893E08800A2925D /* MJMStyleSheet.m */; };
+		E61FE8EE1893EF0600A2925D /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E61FE8EC1893EF0600A2925D /* Raleway-Light.ttf */; };
+		E61FE8EF1893EF0600A2925D /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E61FE8ED1893EF0600A2925D /* Raleway-SemiBold.ttf */; };
+		E61FE8F21894051E00A2925D /* MJMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FE8F11894051E00A2925D /* MJMNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +79,12 @@
 		902A5BA41893D409001D3832 /* MJMDareEditVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJMDareEditVC.m; path = Classes/MJMDareEditVC.m; sourceTree = "<group>"; };
 		902A5BA51893D409001D3832 /* MJMDareEditVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MJMDareEditVC.xib; path = Classes/MJMDareEditVC.xib; sourceTree = "<group>"; };
 		902A5BA81893DD5B001D3832 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = FrienDare/Firebase.framework; sourceTree = "<group>"; };
+		E61FE8E91893E08800A2925D /* MJMStyleSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMStyleSheet.h; sourceTree = "<group>"; };
+		E61FE8EA1893E08800A2925D /* MJMStyleSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMStyleSheet.m; sourceTree = "<group>"; };
+		E61FE8EC1893EF0600A2925D /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
+		E61FE8ED1893EF0600A2925D /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		E61FE8F01894051E00A2925D /* MJMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMNavigationController.h; sourceTree = "<group>"; };
+		E61FE8F11894051E00A2925D /* MJMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +158,8 @@
 			children = (
 				902A5B6F1893A793001D3832 /* MJMAppDelegate.h */,
 				902A5B701893A793001D3832 /* MJMAppDelegate.m */,
+				E61FE8E91893E08800A2925D /* MJMStyleSheet.h */,
+				E61FE8EA1893E08800A2925D /* MJMStyleSheet.m */,
 				902A5B721893A793001D3832 /* Main.storyboard */,
 				902A5B981893A838001D3832 /* Classes */,
 				902A5B781893A793001D3832 /* Images.xcassets */,
@@ -159,6 +171,8 @@
 		902A5B671893A793001D3832 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E61FE8EC1893EF0600A2925D /* Raleway-Light.ttf */,
+				E61FE8ED1893EF0600A2925D /* Raleway-SemiBold.ttf */,
 				902A5B681893A793001D3832 /* FrienDare-Info.plist */,
 				902A5B691893A793001D3832 /* InfoPlist.strings */,
 				902A5B6C1893A793001D3832 /* main.m */,
@@ -197,6 +211,8 @@
 		902A5B991893A843001D3832 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E61FE8F01894051E00A2925D /* MJMNavigationController.h */,
+				E61FE8F11894051E00A2925D /* MJMNavigationController.m */,
 				902A5B751893A793001D3832 /* MJMViewController.h */,
 				902A5B761893A793001D3832 /* MJMViewController.m */,
 				902A5BA31893D409001D3832 /* MJMDareEditVC.h */,
@@ -295,8 +311,10 @@
 				902A5BA71893D409001D3832 /* MJMDareEditVC.xib in Resources */,
 				902A5B791893A793001D3832 /* Images.xcassets in Resources */,
 				902A5B9F1893C4C2001D3832 /* MJMDareCardView.xib in Resources */,
+				E61FE8EE1893EF0600A2925D /* Raleway-Light.ttf in Resources */,
 				902A5B6B1893A793001D3832 /* InfoPlist.strings in Resources */,
 				902A5B741893A793001D3832 /* Main.storyboard in Resources */,
+				E61FE8EF1893EF0600A2925D /* Raleway-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,10 +333,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E61FE8EB1893E08800A2925D /* MJMStyleSheet.m in Sources */,
 				902A5BA61893D409001D3832 /* MJMDareEditVC.m in Sources */,
 				902A5B6D1893A793001D3832 /* main.m in Sources */,
 				902A5B9C1893C284001D3832 /* MJMDareCardView.m in Sources */,
 				902A5B711893A793001D3832 /* MJMAppDelegate.m in Sources */,
+				E61FE8F21894051E00A2925D /* MJMNavigationController.m in Sources */,
 				902A5B771893A793001D3832 /* MJMViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
