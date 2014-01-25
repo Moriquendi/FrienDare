@@ -90,6 +90,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="proveButton" destination="gcY-Xb-He5" id="vnh-qW-ans"/>
+                <outlet property="proveButton" destination="gcY-Xb-He5" id="agS-mQ-iMP"/>
             </connections>
         </view>
     </objects>
