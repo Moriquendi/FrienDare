@@ -448,9 +448,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/jamiesookprasong/Downloads,
-					"/Users/jamiesookprasong/Google\\ Drive/GitHub/FrienDare/FrienDare/FrienDareTests",
-					/Users/Michal/Documents/Projects/FrienDare/FrienDare/FrienDare/FrienDare,
+					"$(SRCROOT)/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FrienDare/FrienDare-Prefix.pch";
@@ -468,9 +466,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/jamiesookprasong/Downloads,
-					"/Users/jamiesookprasong/Google\\ Drive/GitHub/FrienDare/FrienDare/FrienDareTests",
-					/Users/Michal/Documents/Projects/FrienDare/FrienDare/FrienDare/FrienDare,
+					"$(SRCROOT)/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FrienDare/FrienDare-Prefix.pch";
