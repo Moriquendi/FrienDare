@@ -12,5 +12,8 @@
 
 @property (nonatomic, strong, readonly) UILabel *prizeAmountLabel;
 @property (weak, nonatomic) IBOutlet UIButton *proveButton;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UIButton *photoButton;
 
 @end
