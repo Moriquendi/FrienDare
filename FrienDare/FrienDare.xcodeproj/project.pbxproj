@@ -21,6 +21,8 @@
 		902A5B821893A793001D3832 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902A5B641893A793001D3832 /* UIKit.framework */; };
 		902A5B8A1893A793001D3832 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 902A5B881893A793001D3832 /* InfoPlist.strings */; };
 		902A5B8C1893A793001D3832 /* FrienDareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 902A5B8B1893A793001D3832 /* FrienDareTests.m */; };
+		902A5B9C1893C284001D3832 /* MJMDareCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 902A5B9B1893C284001D3832 /* MJMDareCardView.m */; };
+		902A5B9F1893C4C2001D3832 /* MJMDareCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 902A5B9E1893C4C2001D3832 /* MJMDareCardView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		902A5B871893A793001D3832 /* FrienDareTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FrienDareTests-Info.plist"; sourceTree = "<group>"; };
 		902A5B891893A793001D3832 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		902A5B8B1893A793001D3832 /* FrienDareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrienDareTests.m; sourceTree = "<group>"; };
+		902A5B9A1893C284001D3832 /* MJMDareCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJMDareCardView.h; path = Classes/MJMDareCardView.h; sourceTree = "<group>"; };
+		902A5B9B1893C284001D3832 /* MJMDareCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJMDareCardView.m; path = Classes/MJMDareCardView.m; sourceTree = "<group>"; };
+		902A5B9E1893C4C2001D3832 /* MJMDareCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MJMDareCardView.xib; path = Classes/Views/MJMDareCardView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				902A5B991893A843001D3832 /* Controllers */,
+				902A5B9D1893C286001D3832 /* Views */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -166,6 +172,16 @@
 				902A5B761893A793001D3832 /* MJMViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		902A5B9D1893C286001D3832 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				902A5B9A1893C284001D3832 /* MJMDareCardView.h */,
+				902A5B9B1893C284001D3832 /* MJMDareCardView.m */,
+				902A5B9E1893C4C2001D3832 /* MJMDareCardView.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				902A5B791893A793001D3832 /* Images.xcassets in Resources */,
+				902A5B9F1893C4C2001D3832 /* MJMDareCardView.xib in Resources */,
 				902A5B6B1893A793001D3832 /* InfoPlist.strings in Resources */,
 				902A5B741893A793001D3832 /* Main.storyboard in Resources */,
 			);
@@ -266,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				902A5B6D1893A793001D3832 /* main.m in Sources */,
+				902A5B9C1893C284001D3832 /* MJMDareCardView.m in Sources */,
 				902A5B711893A793001D3832 /* MJMAppDelegate.m in Sources */,
 				902A5B771893A793001D3832 /* MJMViewController.m in Sources */,
 			);
