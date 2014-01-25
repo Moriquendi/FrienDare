@@ -7,6 +7,7 @@
 //
 
 #import "MJMDareEditVC.h"
+#import <Firebase/Firebase.h>
 
 @interface MJMDareEditVC ()
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
@@ -52,7 +53,7 @@
 - (IBAction)doneButtonTapped:(id)sender
 {
     NSString *title = self.titleTextField.text;
-    NSNumber *prizeAmount = @([self.titleTextField.text integerValue]);
+    NSNumber *prizeAmount = @([self.priceAmountTextField.text integerValue]);
     NSNumber *duration = @(self.durationSteppter.value);
     NSString *description = self.descriptionTextField.text;
     
@@ -72,7 +73,16 @@
                           duration:(NSNumber *)duration
                        description:(NSString *)description
 {
-    
+    Firebase* f = [[Firebase alloc] initWithUrl:@"https://friendare.firebaseio.com/"];
+    //Firebase* daresRef = [f childByAppendingPath:@"dares/"];
+    Firebase* daresRef = [f childByAppendingPath:title];
+    //@([startDate timeIntervalSince1970])
+    [daresRef setValue:@{
+                         @"title": title,
+                         @"prizeAmount": prizeAmount,
+                         @"duration": duration,
+                         @"description": description
+                         }];
 }
 
 @end
