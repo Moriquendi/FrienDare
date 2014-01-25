@@ -45,7 +45,9 @@ UIImagePickerControllerDelegate>
         [dareCard.proveButton addTarget:self
                                  action:@selector(_takeProvePicture:)
                        forControlEvents:UIControlEventTouchUpInside];
-        dareCard.proveButton.backgroundColor = [[MJMStyleSheet sharedInstance] proveButtonBackgroundColor];
+        
+        dareCard.proveButton.backgroundColor = [UIColor redColor];
+        
         [self.contentScrollView addSubview:dareCard];
     }
 }
