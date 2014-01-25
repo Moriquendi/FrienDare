@@ -7,11 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface MJMChallenge : NSObject
+@interface MJMChallenge : NSManagedObject
 
-@property (nonatomic, strong) NSNumber *ID;
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *description;
++ (instancetype)createOrUpdate:(NSDictionary *)info;
+
+@property (nonatomic, retain) NSString *objID;
+@property (nonatomic, retain) NSString *title;
+@property (nonatomic, retain) NSNumber *prizeAmount;
+@property (nonatomic, retain) NSNumber *duration;
+@property (nonatomic, retain) NSString *challengeDescription;
 
 @end

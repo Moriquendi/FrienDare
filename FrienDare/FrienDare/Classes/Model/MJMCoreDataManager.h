@@ -13,5 +13,6 @@
 + (instancetype)sharedInstance;
 
 - (void)initModelWithCompletionHandler:(void (^)(void))completionHandler;
+- (NSManagedObjectContext *)mainManagedObjectContext;
 
 @end

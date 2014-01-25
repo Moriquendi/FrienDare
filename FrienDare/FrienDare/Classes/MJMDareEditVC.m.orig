@@ -7,8 +7,11 @@
 //
 
 #import "MJMDareEditVC.h"
-#import "MJMChallenge.h"
+<<<<<<< HEAD
 #import <Firebase/Firebase.h>
+=======
+#import "MJMChallenge.h"
+>>>>>>> f76086b12f060740ea122bb3759d4034843c9605
 
 @interface MJMDareEditVC ()
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
@@ -74,29 +77,19 @@
                           duration:(NSNumber *)duration
                        description:(NSString *)description
 {
-    
-    //add new to Firebase
+<<<<<<< HEAD
     Firebase* f = [[Firebase alloc] initWithUrl:@"https://friendare.firebaseio.com/dares"];
-    Firebase* newDarePushRef = [f childByAutoId];
-    [newDarePushRef setValue:@{
+    Firebase* daresRef = [f childByAppendingPath:title];
+    //@([startDate timeIntervalSince1970])
+    [daresRef setValue:@{
                          @"title": title,
                          @"prizeAmount": prizeAmount,
                          @"duration": duration,
                          @"description": description
                          }];
-    
-    NSString* pushedDareName = newDarePushRef.name;
-    
-    [newDarePushRef observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-        // do some stuff once
-        MJMChallenge *challenge = [MJMChallenge createOrUpdate:@{@"objID": pushedDareName,
-                                                                 @"title": title,
-                                                                 @"prizeAmount": prizeAmount,
-                                                                 @"duration": duration,
-                                                                 @"description": description
-                                                                 }];
-    }];
-
+=======
+    [MJMChallenge createOrUpdate:@{@"objID": @5}];
+>>>>>>> f76086b12f060740ea122bb3759d4034843c9605
 }
 
 @end

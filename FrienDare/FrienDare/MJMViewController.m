@@ -11,6 +11,7 @@
 #import "MJMStyleSheet.h"
 #import "MJMChallenge.h"
 #import "MJMUser.h"
+#import "MJMCoreDataManager.h"
 
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <Firebase/Firebase.h>
@@ -37,16 +38,18 @@ UIActionSheetDelegate>
     self.view.backgroundColor = [[MJMStyleSheet sharedInstance] backgroundColor];
     
     // Load challenges
-    const NSInteger CARDS_COUNT = 5;
-    NSMutableArray *allChalenges = [[NSMutableArray alloc] init];
-    for (NSInteger i=0; i<CARDS_COUNT; i++) {
-        MJMChallenge *newChallenge = [[MJMChallenge alloc] init];
-        newChallenge.title = @"Title";
-        newChallenge.description = @"Description";
-        [allChalenges addObject:newChallenge];
-    }
-    self.challenges = [NSArray arrayWithArray:allChalenges];
     
+    NSFetchRequest *allChallengesRequest = [NSFetchRequest fetchRequestWithEntityName:@"MJMChallenge"];
+    NSManagedObjectContext *context = [[MJMCoreDataManager sharedInstance] mainManagedObjectContext];
+    NSError *err;
+    NSArray *results = [context executeFetchRequest:allChallengesRequest error:&err];
+    if (results) {
+        self.challenges = results;
+    }
+    else {
+        NSLog(@"Fetch Error: %@", err);
+    }
+
     // Content scroll view
     self.contentScrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     self.contentScrollView.pagingEnabled = YES;
@@ -66,7 +69,7 @@ UIActionSheetDelegate>
                        forControlEvents:UIControlEventTouchUpInside];
         
         dareCard.titleLabel.text = challenge.title;
-        dareCard.descriptionLabel.text = challenge.description;
+        dareCard.descriptionLabel.text = challenge.challengeDescription;
 
         [self.contentScrollView addSubview:dareCard];
     }
@@ -77,6 +80,12 @@ UIActionSheetDelegate>
 - (void)_takeProvePicture:(UIButton *)sender
 {
     self.selectedChallange = sender.tag;
+    
+    [self _addProveImage:[UIImage imageNamed:@"doge"]
+             toChallange:self.challenges[self.selectedChallange]
+                  byUser:[MJMUser currentUser]];
+    return;
+    
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                                              delegate:self
                                                     cancelButtonTitle:@"Cancel"
