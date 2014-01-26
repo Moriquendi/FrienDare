@@ -34,7 +34,9 @@
     self.navigationBar.translucent = NO;
     self.navigationBar.tintColor = [UIColor colorWithWhite:190./255. alpha:1.];
     
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor colorWithWhite:190./255. alpha:1.]}];
+    [[UINavigationBar appearance] setTitleTextAttributes:
+     @{NSForegroundColorAttributeName : [UIColor colorWithWhite:190./255. alpha:1.],
+       NSFontAttributeName : [UIFont fontWithName:@"Raleway-light" size:14]}];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 

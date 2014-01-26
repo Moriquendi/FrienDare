@@ -48,13 +48,14 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRm-cX-pfl">
-                            <rect key="frame" x="0.0" y="444" width="320" height="124"/>
+                            <rect key="frame" x="0.0" y="510" width="320" height="58"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.19607843137254902" green="0.59607843137254901" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="58" id="tHR-Bi-bT7"/>
+                                <constraint firstAttribute="height" constant="124" id="tHR-Bi-bT7"/>
                             </constraints>
-                            <state key="normal" title="Post">
+                            <state key="normal" title="post">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
@@ -97,7 +98,7 @@
                             </constraints>
                         </view>
                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="clock.png" translatesAutoresizingMaskIntoConstraints="NO" id="jQY-Yn-wH9">
-                            <rect key="frame" x="148" y="226" width="25" height="39"/>
+                            <rect key="frame" x="148" y="233" width="25" height="39"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="a1S-6K-Rol"/>
@@ -136,19 +137,19 @@
                         <constraint firstAttribute="centerX" secondItem="rUa-Vy-iVW" secondAttribute="centerX" id="4MY-kx-Hvb"/>
                         <constraint firstItem="E9h-We-ysN" firstAttribute="top" secondItem="xbt-7c-hD1" secondAttribute="bottom" constant="28" id="8em-f5-PTz"/>
                         <constraint firstItem="MRm-cX-pfl" firstAttribute="leading" secondItem="c3Y-kE-bpY" secondAttribute="leading" id="BGA-jX-NZm"/>
-                        <constraint firstItem="rUa-Vy-iVW" firstAttribute="top" secondItem="jQY-Yn-wH9" secondAttribute="bottom" constant="8" id="BPM-9T-mDQ"/>
+                        <constraint firstItem="rUa-Vy-iVW" firstAttribute="top" secondItem="jQY-Yn-wH9" secondAttribute="bottom" constant="-10" id="BPM-9T-mDQ"/>
                         <constraint firstAttribute="bottom" secondItem="MRm-cX-pfl" secondAttribute="bottom" id="CI4-nB-Qqd"/>
                         <constraint firstItem="MRm-cX-pfl" firstAttribute="leading" secondItem="c3Y-kE-bpY" secondAttribute="leading" id="LX4-fU-ttV"/>
                         <constraint firstAttribute="centerX" secondItem="Dcd-Jl-dfh" secondAttribute="centerX" id="Mlg-C2-hH4"/>
                         <constraint firstAttribute="centerX" secondItem="E9h-We-ysN" secondAttribute="centerX" id="Qja-Bc-sqK"/>
                         <constraint firstItem="LVM-ei-xgk" firstAttribute="top" secondItem="Dcd-Jl-dfh" secondAttribute="bottom" constant="8" id="REB-c8-R7t"/>
-                        <constraint firstItem="jQY-Yn-wH9" firstAttribute="top" secondItem="E9h-We-ysN" secondAttribute="bottom" constant="8" id="Rmq-Df-FlH"/>
+                        <constraint firstItem="jQY-Yn-wH9" firstAttribute="top" secondItem="E9h-We-ysN" secondAttribute="bottom" constant="26" id="Rmq-Df-FlH"/>
                         <constraint firstAttribute="centerX" secondItem="jQY-Yn-wH9" secondAttribute="centerX" id="Ulz-vB-B1e"/>
                         <constraint firstAttribute="trailing" secondItem="MRm-cX-pfl" secondAttribute="trailing" id="Wtm-gy-UJb"/>
-                        <constraint firstItem="rUa-Vy-iVW" firstAttribute="leading" secondItem="TvK-bP-7Gz" secondAttribute="leading" id="aHs-Kq-DXC"/>
+                        <constraint firstItem="rUa-Vy-iVW" firstAttribute="leading" secondItem="TvK-bP-7Gz" secondAttribute="leading" constant="-18" id="aHs-Kq-DXC"/>
                         <constraint firstAttribute="centerX" secondItem="xbt-7c-hD1" secondAttribute="centerX" id="c7U-nL-bs5"/>
                         <constraint firstItem="xbt-7c-hD1" firstAttribute="top" secondItem="vWt-DY-T6Q" secondAttribute="bottom" constant="-7" id="ddV-lh-EZc"/>
-                        <constraint firstItem="Dcd-Jl-dfh" firstAttribute="leading" secondItem="LVM-ei-xgk" secondAttribute="leading" id="fOh-VV-QPU"/>
+                        <constraint firstItem="Dcd-Jl-dfh" firstAttribute="leading" secondItem="LVM-ei-xgk" secondAttribute="leading" constant="-18" id="fOh-VV-QPU"/>
                         <constraint firstItem="vWt-DY-T6Q" firstAttribute="top" secondItem="c3Y-kE-bpY" secondAttribute="top" constant="20" id="icz-Qg-Uid"/>
                         <constraint firstItem="MRm-cX-pfl" firstAttribute="leading" secondItem="c3Y-kE-bpY" secondAttribute="leading" id="nJA-qt-tKY"/>
                         <constraint firstItem="TvK-bP-7Gz" firstAttribute="top" secondItem="rUa-Vy-iVW" secondAttribute="bottom" constant="7" id="vdd-bp-s2D"/>
