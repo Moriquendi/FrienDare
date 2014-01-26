@@ -31,10 +31,13 @@
                                              blue:43./255.
                                             alpha:1.]];
 
-    self.navigationBar.translucent = YES;
+    self.navigationBar.translucent = NO;
     self.navigationBar.tintColor = [UIColor colorWithWhite:190./255. alpha:1.];
     
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor colorWithWhite:190./255. alpha:1.]}];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
 }
 
 - (void)didReceiveMemoryWarning
