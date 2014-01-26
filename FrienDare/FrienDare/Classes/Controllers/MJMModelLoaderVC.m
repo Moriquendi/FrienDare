@@ -9,6 +9,7 @@
 
 #import "MJMModelLoaderVC.h"
 #import "MJMCoreDataManager.h"
+#import "MJMChallenge.h"
 #import <Firebase/Firebase.h>
 
 #import "MJMStyleSheet.h"
@@ -27,27 +28,26 @@
     
     [[MJMCoreDataManager sharedInstance] initModelWithCompletionHandler:^{
        
-        /*Firebase* f = [[Firebase alloc] initWithUrl:@"https://friendare.firebaseio.com/dares"];
+        Firebase* f = [[Firebase alloc] initWithUrl:@"https://friendare.firebaseio.com/dares/"];
         
-        [f observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
-            NSDictionary* msgData = snapshot.value;
-            NSLog(@"%@ says %@", msgData[@"user_id"], msgData[@"text"]);
-        }];
-        
-        
-        //MJMChallenge *challenge = [MJMChallenge createOrUpdate:@{@"objID": @5}];
-        NSString* pushedDareName = newDarePushRef.name;
-        
-        [newDarePushRef observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-            // do some stuff once
-            MJMChallenge *challenge = [MJMChallenge createOrUpdate:@{@"objID": pushedDareName,
-                                                                     @"title": title,
-                                                                     @"prizeAmount": prizeAmount,
-                                                                     @"duration": duration,
-                                                                     @"challengeDescription": description
+        [f observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+            
+            //NSLog(@"%@ -> %@", snapshot.name, snapshot.value);
+            
+            NSDictionary *dares = snapshot.value;
+            
+            //NSLog(dares);
+            for(id dare in dares){
+                //NSLog((NSString *) dare);
+            MJMChallenge *challenge = [MJMChallenge createOrUpdate:@{@"objID": (NSString *) dare,
+                                                                     @"title": [dares objectForKey:dare][@"title"],
+                                                                     @"prizeAmount": [dares objectForKey:dare][@"prizeAmount"],
+                                                                     @"duration": [dares objectForKey:dare][@"duration"],
+                                                                     @"challengeDescription": [dares objectForKey:dare][@"challengeDescription"]
                                                                      }];
+                
+            }
         }];
-        */
         
         [self performSegueWithIdentifier:@"showFirstVC"
                                   sender:self];

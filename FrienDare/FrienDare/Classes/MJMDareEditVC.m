@@ -97,7 +97,7 @@
                          startDate:(NSDate *)startDate
                            endDate:(NSDate *)endDate
                           duration:(NSNumber *)duration
-                       description:(NSString *)description
+                       description:(NSString *)challengeDescription
 {
     
     //add new to Firebase
@@ -107,7 +107,7 @@
                          @"title": title,
                          @"prizeAmount": prizeAmount,
                          @"duration": duration,
-                         @"challengeDescription": description
+                         @"challengeDescription": challengeDescription
                          }];
     
     NSString* pushedDareName = newDarePushRef.name;
@@ -118,7 +118,7 @@
                                                                  @"title": title,
                                                                  @"prizeAmount": prizeAmount,
                                                                  @"duration": duration,
-                                                                 @"challengeDescription": description
+                                                                 @"challengeDescription": challengeDescription
                                                                  }];
     }];
 
