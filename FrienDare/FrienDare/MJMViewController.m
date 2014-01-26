@@ -13,6 +13,8 @@
 #import "MJMUser.h"
 #import "MJMCoreDataManager.h"
 #import "MBProgressHUD.h"
+#import "MJMDareEditVC.h"
+#import "MJMNavigationController.h"
 
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <Firebase/Firebase.h>
@@ -42,6 +44,9 @@ UIActionSheetDelegate>
     [self.view applyNoiseWithOpacity:0.1];
     //
     // Load challenges
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Go" style:UIBarButtonItemStylePlain target:self action:@selector(createNewDare:)];
+    
     
     NSFetchRequest *allChallengesRequest = [NSFetchRequest fetchRequestWithEntityName:@"MJMChallenge"];
     NSManagedObjectContext *context = [[MJMCoreDataManager sharedInstance] mainManagedObjectContext];
@@ -219,6 +224,12 @@ UIActionSheetDelegate>
 	HUD.labelText = @"Completed";
 	[HUD show:YES];
 	[HUD hide:YES afterDelay:2];
+}
+
+- (void)createNewDare:(id)sender
+{
+    MJMNavigationController *nvc = [[MJMNavigationController alloc] initWithRootViewController:[[MJMDareEditVC alloc] initWithCoder:nil]];
+    [self.navigationController presentViewController:nvc animated:YES completion:nil];
 }
 
 @end

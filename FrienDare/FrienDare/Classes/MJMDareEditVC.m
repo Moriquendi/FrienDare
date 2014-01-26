@@ -9,6 +9,7 @@
 #import "MJMDareEditVC.h"
 #import "MJMChallenge.h"
 #import <Firebase/Firebase.h>
+#import "MJMStyleSheet.h"
 
 @interface MJMDareEditVC ()
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
@@ -37,11 +38,20 @@
         self.view = nibObjects.lastObject;
         
         self.title = @"New Dare";
+        self.view.backgroundColor = [[MJMStyleSheet sharedInstance] backgroundColor];
     }
     return self;
 }
 
 #pragma mark - View lifecycle
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Go" style:UIBarButtonItemStylePlain target:self action:@selector(dismissZium:)];
+
+}
 
 #pragma mark - MJMDareEditVC
 
@@ -113,6 +123,11 @@
                                                                  }];
     }];
 
+}
+
+- (void)dismissZium:(id)sender
+{
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
