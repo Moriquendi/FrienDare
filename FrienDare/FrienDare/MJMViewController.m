@@ -39,13 +39,16 @@ UIActionSheetDelegate>
 {
     [super viewDidLoad];
 
-    self.title = @"Dares!";
+//    self.title = @"Dares!";
     self.view.backgroundColor = [[MJMStyleSheet sharedInstance] backgroundColor];
     [self.view applyNoiseWithOpacity:0.1];
     //
     // Load challenges
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Go" style:UIBarButtonItemStylePlain target:self action:@selector(createNewDare:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"newDare"]
+                                                                              style:UIBarButtonItemStylePlain
+                                                                             target:self
+                                                                             action:@selector(createNewDare:)];
     
     
     NSFetchRequest *allChallengesRequest = [NSFetchRequest fetchRequestWithEntityName:@"MJMChallenge"];

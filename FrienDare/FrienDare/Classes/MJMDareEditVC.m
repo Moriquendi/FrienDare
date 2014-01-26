@@ -38,7 +38,7 @@
         NSArray *nibObjects = [nib instantiateWithOwner:self options:nil];
         self.view = nibObjects.lastObject;
         
-        self.title = @"New Dare";
+        self.title = @"new dare";
         self.view.backgroundColor = [[MJMStyleSheet sharedInstance] backgroundColor];
     }
     return self;
@@ -62,6 +62,13 @@
     self.dolarLabel.text = @"$";
     self.dolarLabel.font = [UIFont fontWithName:@"Raleway-Light" size:18];
     self.dolarLabel.alpha = 0.34;
+    
+    self.titleTextField.font = [UIFont fontWithName:@"Raleway-Semibold"
+                                               size:15];
+    self.titleTextField.textColor = [UIColor colorWithRed:28./255
+                                                    green:36./255.
+                                                     blue:43./255.
+                                                    alpha:1.];
 }
 
 #pragma mark - MJMDareEditVC

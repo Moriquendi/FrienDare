@@ -13,7 +13,7 @@
                 <outlet property="durationLabel" destination="TvK-bP-7Gz" id="8ej-Zh-gGW"/>
                 <outlet property="durationSlider" destination="rUa-Vy-iVW" id="XrJ-fP-mue"/>
                 <outlet property="prizeAmountSlider" destination="Dcd-Jl-dfh" id="bAB-pu-zPp"/>
-                <outlet property="titleTextField" destination="vWt-DY-T6Q" id="8Kd-Jb-tqz"/>
+                <outlet property="titleTextField" destination="vWt-DY-T6Q" id="xIt-uL-n39"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>

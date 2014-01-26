@@ -55,6 +55,7 @@
 		E61FE8F418943C7E00A2925D /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E61FE8F318943C7E00A2925D /* fontawesome-webfont.ttf */; };
 		E61FE8F71894BF3100A2925D /* UIView+JMNoise.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FE8F61894BF3100A2925D /* UIView+JMNoise.m */; };
 		E61FE8FD1894DAF800A2925D /* CountDownTimerUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FE8FC1894DAF800A2925D /* CountDownTimerUtility.m */; };
+		E61FE8FF1895823100A2925D /* newDare@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E61FE8FE1895823100A2925D /* newDare@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		E61FE8F61894BF3100A2925D /* UIView+JMNoise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JMNoise.m"; sourceTree = "<group>"; };
 		E61FE8FB1894DAF800A2925D /* CountDownTimerUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownTimerUtility.h; sourceTree = "<group>"; };
 		E61FE8FC1894DAF800A2925D /* CountDownTimerUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownTimerUtility.m; sourceTree = "<group>"; };
+		E61FE8FE1895823100A2925D /* newDare@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newDare@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 				90B77DD318950D39002B452F /* 37x-Checkmark@2x.png */,
 				90B77DCE1894B1FA002B452F /* Movies */,
 				90B77DBE18947018002B452F /* clock@2x.png */,
+				E61FE8FE1895823100A2925D /* newDare@2x.png */,
 				90B77DBF18947018002B452F /* dollar.png */,
 				90B77DC018947018002B452F /* sliderThumb@2x.png */,
 				90E69469189449C300330948 /* doge.png */,
@@ -398,6 +401,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E61FE8FF1895823100A2925D /* newDare@2x.png in Resources */,
 				90B77DCD1894B1F5002B452F /* FrienDare5.mp4 in Resources */,
 				902A5BA71893D409001D3832 /* MJMDareEditVC.xib in Resources */,
 				90B77DCC1894B1F5002B452F /* FrienDare4.mp4 in Resources */,

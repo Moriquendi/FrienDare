@@ -36,7 +36,7 @@
     
     [[UINavigationBar appearance] setTitleTextAttributes:
      @{NSForegroundColorAttributeName : [UIColor colorWithWhite:190./255. alpha:1.],
-       NSFontAttributeName : [UIFont fontWithName:@"Raleway-light" size:14]}];
+       NSFontAttributeName : [UIFont fontWithName:@"Raleway-light" size:20]}];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
