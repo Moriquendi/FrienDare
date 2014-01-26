@@ -8,12 +8,16 @@
 
 #import "MJMDareCardView.h"
 #import "MJMStyleSheet.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface MJMDareCardView ()
 @property (nonatomic, strong, readwrite) UILabel *prizeAmountLabel;
+@property (nonatomic, strong) MPMoviePlayerController *moviePlayer;
 @end
 
 @implementation MJMDareCardView
+
+#pragma mark - UIView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -39,6 +43,19 @@
         [self.proveButton addSubview:photoLabel];
     }
     return self;
+}
+
+#pragma mark - MJMDareCardView
+
+- (void)addMovieViewAndPlay:(NSURL *)videoURL
+{
+    self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:videoURL];
+    self.moviePlayer.view.frame = CGRectMake(0,
+                                   self.frame.size.height - 150,
+                                   self.frame.size.width,
+                                   150);
+    [self addSubview:self.moviePlayer.view];
+    [self.moviePlayer play];
 }
 
 @end

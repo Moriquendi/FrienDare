@@ -24,7 +24,7 @@ UIActionSheetDelegate>
 @property (nonatomic, strong) UIScrollView *contentScrollView;
 
 @property (nonatomic, strong) NSArray *challenges;
-
+@property (nonatomic, strong) NSArray *dareCardViews;
 @property (nonatomic) NSUInteger selectedChallange;
 
 @end
@@ -57,6 +57,7 @@ UIActionSheetDelegate>
     [self.view addSubview:self.contentScrollView];
     
     // Add card views
+    NSMutableArray *allDareCards = [[NSMutableArray alloc] initWithCapacity:[self.challenges count]];
     for (NSInteger i=0; i<[self.challenges count]; i++) {
         MJMChallenge *challenge = self.challenges[i];
         MJMDareCardView *dareCard = [[MJMDareCardView alloc] initWithFrame:CGRectMake(0, 0, 250, 360)];
@@ -71,8 +72,10 @@ UIActionSheetDelegate>
         dareCard.titleLabel.text = challenge.title;
         dareCard.descriptionLabel.text = challenge.challengeDescription;
 
+        [allDareCards addObject:dareCard];
         [self.contentScrollView addSubview:dareCard];
     }
+    self.dareCardViews = [NSArray arrayWithArray:allDareCards];
 }
 
 #pragma mark - MJMViewController
