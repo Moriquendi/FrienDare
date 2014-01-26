@@ -92,15 +92,15 @@ UIActionSheetDelegate>
         [self.contentScrollView addSubview:dareCard];
         
         // Temporary
-        if (!challenge.videoPath) {
+//        if (!challenge.videoPath) {
             NSURL *movieURL = [[NSBundle mainBundle] URLForResource:[NSString stringWithFormat:@"FrienDare%i", i+1]
                                                       withExtension:@"mp4"];
             challenge.videoPath = [movieURL path];
             dareCard.movieURL = movieURL;
-        }
-        else {
-            dareCard.movieURL = [NSURL URLWithString:challenge.videoPath];
-        }
+//        }
+//        else {
+//            dareCard.movieURL = [NSURL URLWithString:challenge.videoPath];
+//        }
         
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_speedClock:)];
         tap.numberOfTouchesRequired = 2;
