@@ -41,6 +41,7 @@
         photoLabel.textAlignment = NSTextAlignmentCenter;
         [self.proveButton addSubview:photoLabel];
         
+        self.titleLabel.font = [UIFont fontWithName:@"Raleway-light" size:15];
         
         self.timer = [CountDownTimerUtility new];
         self.timer.delegate = self;
@@ -48,6 +49,7 @@
     }
     return self;
 }
+
 
 #pragma mark - MJMDareCardView
 

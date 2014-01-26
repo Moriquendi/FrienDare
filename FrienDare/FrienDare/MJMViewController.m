@@ -74,7 +74,7 @@ UIActionSheetDelegate>
         MJMChallenge *challenge = self.challenges[i];
         MJMDareCardView *dareCard = [[MJMDareCardView alloc] initWithFrame:CGRectMake(0, 0, 250, 360)];
         dareCard.center = CGPointMake(self.view.bounds.size.width/2.f,
-                                      self.view.bounds.size.height/2.f - 66);
+                                      self.view.bounds.size.height/2.f - 40);
         dareCard.frame = CGRectOffset(dareCard.frame, self.view.bounds.size.width * i, 0);
         dareCard.proveButton.tag = i;
         [dareCard.proveButton addTarget:self
@@ -105,7 +105,6 @@ UIActionSheetDelegate>
 {
     ((MJMDareCardView *)gesture.view).timer.countDownTime -= 10;
 }
-
 
 #pragma mark - MJMViewController
 
