@@ -9,6 +9,7 @@
 #import "MJMDareCardView.h"
 #import "MJMStyleSheet.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "CountDownTimerUtility.h"
 
 @interface MJMDareCardView ()
 @property (nonatomic, strong, readwrite) UILabel *prizeAmountLabel;
@@ -41,6 +42,11 @@
         photoLabel.text = @"\uf030";
         photoLabel.textAlignment = NSTextAlignmentCenter;
         [self.proveButton addSubview:photoLabel];
+        
+        
+//        self.timerLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, 50)];
+        CountDownTimerUtility *timer = [CountDownTimerUtility new];
+        [timer startCountDownTimerWithTime:123 andUILabel:self.timerLabel];
     }
     return self;
 }

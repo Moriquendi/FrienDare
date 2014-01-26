@@ -72,7 +72,7 @@ UIActionSheetDelegate>
                        forControlEvents:UIControlEventTouchUpInside];
         
         dareCard.titleLabel.text = challenge.title;
-        dareCard.descriptionLabel.text = challenge.challengeDescription;
+//        dareCard.descriptionLabel.text = challenge.challengeDescription;
 
         [allDareCards addObject:dareCard];
         [self.contentScrollView addSubview:dareCard];
