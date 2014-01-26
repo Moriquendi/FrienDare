@@ -39,6 +39,9 @@
 		90B77DCB1894B1F5002B452F /* FrienDare3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 90B77DC61894B1F5002B452F /* FrienDare3.mp4 */; };
 		90B77DCC1894B1F5002B452F /* FrienDare4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 90B77DC71894B1F5002B452F /* FrienDare4.mp4 */; };
 		90B77DCD1894B1F5002B452F /* FrienDare5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 90B77DC81894B1F5002B452F /* FrienDare5.mp4 */; };
+		90B77DD118950C7B002B452F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B77DD018950C7B002B452F /* MBProgressHUD.m */; };
+		90B77DD418950D39002B452F /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B77DD218950D39002B452F /* 37x-Checkmark.png */; };
+		90B77DD518950D39002B452F /* 37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B77DD318950D39002B452F /* 37x-Checkmark@2x.png */; };
 		90E6945B18943CD300330948 /* MJMChallenge.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E6945A18943CD300330948 /* MJMChallenge.m */; };
 		90E6945F1894422400330948 /* FrienDare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90E6945D1894422400330948 /* FrienDare.xcdatamodeld */; };
 		90E694621894427400330948 /* MJMModelLoaderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E694611894427400330948 /* MJMModelLoaderVC.m */; };
@@ -104,6 +107,10 @@
 		90B77DC61894B1F5002B452F /* FrienDare3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = FrienDare3.mp4; path = Movies/FrienDare3.mp4; sourceTree = "<group>"; };
 		90B77DC71894B1F5002B452F /* FrienDare4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = FrienDare4.mp4; path = Movies/FrienDare4.mp4; sourceTree = "<group>"; };
 		90B77DC81894B1F5002B452F /* FrienDare5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = FrienDare5.mp4; path = Movies/FrienDare5.mp4; sourceTree = "<group>"; };
+		90B77DCF18950C7B002B452F /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = Classes/MBProgressHUD.h; sourceTree = "<group>"; };
+		90B77DD018950C7B002B452F /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = Classes/MBProgressHUD.m; sourceTree = "<group>"; };
+		90B77DD218950D39002B452F /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
+		90B77DD318950D39002B452F /* 37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark@2x.png"; sourceTree = "<group>"; };
 		90E6945918943CD300330948 /* MJMChallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJMChallenge.h; path = Classes/Model/MJMChallenge.h; sourceTree = "<group>"; };
 		90E6945A18943CD300330948 /* MJMChallenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJMChallenge.m; path = Classes/Model/MJMChallenge.m; sourceTree = "<group>"; };
 		90E6945E1894422400330948 /* FrienDare.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FrienDare.xcdatamodel; sourceTree = "<group>"; };
@@ -132,13 +139,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				902A5B631893A793001D3832 /* CoreGraphics.framework in Frameworks */,
 				4B2D9EEC1893D28A00A11FA5 /* SystemConfiguration.framework in Frameworks */,
 				902A5BA91893DD5B001D3832 /* Firebase.framework in Frameworks */,
 				4B2D9EEA1893D28100A11FA5 /* Security.framework in Frameworks */,
 				4B2D9EE81893D27900A11FA5 /* CFNetwork.framework in Frameworks */,
 				4B2D9EE61893D27000A11FA5 /* libicucore.dylib in Frameworks */,
 				4B2D9EE41893D26200A11FA5 /* libc++.dylib in Frameworks */,
-				902A5B631893A793001D3832 /* CoreGraphics.framework in Frameworks */,
 				902A5B651893A793001D3832 /* UIKit.framework in Frameworks */,
 				902A5B611893A793001D3832 /* Foundation.framework in Frameworks */,
 			);
@@ -211,6 +218,8 @@
 		902A5B671893A793001D3832 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				90B77DD218950D39002B452F /* 37x-Checkmark.png */,
+				90B77DD318950D39002B452F /* 37x-Checkmark@2x.png */,
 				90B77DCE1894B1FA002B452F /* Movies */,
 				90B77DBE18947018002B452F /* clock.png */,
 				90B77DBF18947018002B452F /* dollar.png */,
@@ -249,6 +258,8 @@
 		902A5B981893A838001D3832 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				90B77DCF18950C7B002B452F /* MBProgressHUD.h */,
+				90B77DD018950C7B002B452F /* MBProgressHUD.m */,
 				E61FE8FB1894DAF800A2925D /* CountDownTimerUtility.h */,
 				E61FE8FC1894DAF800A2925D /* CountDownTimerUtility.m */,
 				E61FE8F51894BF3100A2925D /* UIView+JMNoise.h */,
@@ -394,7 +405,9 @@
 				90B77DC318947018002B452F /* sliderThumb.png in Resources */,
 				902A5B791893A793001D3832 /* Images.xcassets in Resources */,
 				90E6946A189449C300330948 /* doge.png in Resources */,
+				90B77DD518950D39002B452F /* 37x-Checkmark@2x.png in Resources */,
 				902A5B9F1893C4C2001D3832 /* MJMDareCardView.xib in Resources */,
+				90B77DD418950D39002B452F /* 37x-Checkmark.png in Resources */,
 				E61FE8EE1893EF0600A2925D /* Raleway-Light.ttf in Resources */,
 				902A5B6B1893A793001D3832 /* InfoPlist.strings in Resources */,
 				90B77DC118947018002B452F /* clock.png in Resources */,
@@ -429,6 +442,7 @@
 				902A5B6D1893A793001D3832 /* main.m in Sources */,
 				902A5B9C1893C284001D3832 /* MJMDareCardView.m in Sources */,
 				902A5B711893A793001D3832 /* MJMAppDelegate.m in Sources */,
+				90B77DD118950C7B002B452F /* MBProgressHUD.m in Sources */,
 				90E694651894458200330948 /* MJMCoreDataManager.m in Sources */,
 				E61FE8FD1894DAF800A2925D /* CountDownTimerUtility.m in Sources */,
 				90E694681894469B00330948 /* MJMUser.m in Sources */,

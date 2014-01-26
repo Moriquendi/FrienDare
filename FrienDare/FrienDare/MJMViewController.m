@@ -12,6 +12,7 @@
 #import "MJMChallenge.h"
 #import "MJMUser.h"
 #import "MJMCoreDataManager.h"
+#import "MBProgressHUD.h"
 
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <Firebase/Firebase.h>
@@ -36,6 +37,7 @@ UIActionSheetDelegate>
 {
     [super viewDidLoad];
 
+    self.title = @"Dares!";
     self.view.backgroundColor = [[MJMStyleSheet sharedInstance] backgroundColor];
     [self.view applyNoiseWithOpacity:0.1];
     //
@@ -180,13 +182,27 @@ UIActionSheetDelegate>
                 byUser:(MJMUser *)user
 {
     // Called when user picked an image
+    [self _showCompletedPopup];
 }
 - (void)_addProveVideo:(NSData *)proveImage
            toChallange:(MJMChallenge *)challange
                 byUser:(MJMUser *)user
 {
     // Called when user picked a video
+    [self _showCompletedPopup];
 }
 
+- (void)_showCompletedPopup
+{
+	MBProgressHUD  *HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+	[self.navigationController.view addSubview:HUD];
+	HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+	
+	// Set custom view mode
+	HUD.mode = MBProgressHUDModeCustomView;
+	HUD.labelText = @"Completed";
+	[HUD show:YES];
+	[HUD hide:YES afterDelay:2];
+}
 
 @end

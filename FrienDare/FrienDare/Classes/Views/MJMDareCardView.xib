@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -45,11 +45,12 @@
                         <constraint firstAttribute="height" constant="3" id="SMN-hr-46v"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="auW-qc-4pA">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auW-qc-4pA">
                     <rect key="frame" x="0.0" y="74" width="200" height="3"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.10980392156862745" green="0.14117647058823529" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
+                        <constraint firstAttribute="width" constant="200" id="Mjo-Km-aW9"/>
                         <constraint firstAttribute="height" constant="3" id="yDU-DG-LjU"/>
                     </constraints>
                 </view>
@@ -71,8 +72,8 @@
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12:12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uc5-31-9VR">
-                    <rect key="frame" x="112" y="92" width="43" height="21"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12:12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uc5-31-9VR">
+                    <rect key="frame" x="0.0" y="92" width="267" height="27"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -81,6 +82,7 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="auW-qc-4pA" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="3km-rN-cBQ"/>
                 <constraint firstItem="GrN-be-ksZ" firstAttribute="top" secondItem="dLI-ut-BHF" secondAttribute="bottom" constant="8" id="647-rP-tGP"/>
                 <constraint firstItem="gcY-Xb-He5" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Aol-vE-sNx"/>
                 <constraint firstItem="GrN-be-ksZ" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="BHR-Ny-kED"/>
@@ -94,6 +96,7 @@
                 <constraint firstItem="dLI-ut-BHF" firstAttribute="top" secondItem="1" secondAttribute="top" constant="127" id="YsD-zx-dUK"/>
                 <constraint firstItem="dLI-ut-BHF" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="Zal-ry-rF4"/>
                 <constraint firstItem="gcY-Xb-He5" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="c3T-9G-cqN"/>
+                <constraint firstItem="auW-qc-4pA" firstAttribute="top" secondItem="bWq-Rd-vCR" secondAttribute="bottom" constant="8" id="fDe-zj-7Tc"/>
                 <constraint firstAttribute="trailing" secondItem="gcY-Xb-He5" secondAttribute="trailing" constant="-1" id="hFW-A5-EGD"/>
                 <constraint firstAttribute="trailing" secondItem="pxb-Dn-c3G" secondAttribute="trailing" constant="-1" id="iB6-T1-F4j"/>
                 <constraint firstAttribute="trailing" secondItem="bWq-Rd-vCR" secondAttribute="trailing" constant="19" id="sib-dj-7Ab"/>
@@ -101,7 +104,6 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="descriptionLabel" destination="GrN-be-ksZ" id="u1L-7y-Br1"/>
                 <outlet property="photoButton" destination="gcY-Xb-He5" id="5RD-5E-J33"/>
                 <outlet property="proveButton" destination="gcY-Xb-He5" id="agS-mQ-iMP"/>
                 <outlet property="timerLabel" destination="Uc5-31-9VR" id="K5U-zQ-bxi"/>
