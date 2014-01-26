@@ -16,11 +16,11 @@
 {
     NSTimer *CountTimer;
     NSTimer *CountDownTimer;
-    int countDownTime;
     int actualTime;
     UILabel *label;
     id<CountDownTimerProtocol>delegate;
 }
+@property (nonatomic) int countDownTime;
 @property (retain)id<CountDownTimerProtocol>delegate;
 -(void)startCountDownTimerWithTime:(int)time andUILabel:(UILabel *)currentLabel;
 -(void)invalidateCurrentCountDownTimer;

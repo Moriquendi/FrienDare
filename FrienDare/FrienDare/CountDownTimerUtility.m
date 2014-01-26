@@ -13,7 +13,7 @@
 
 -(void)startCountDownTimerWithTime:(int)time andUILabel:(UILabel *)currentLabel
 {
-    countDownTime = time;
+    self.countDownTime = time;
     actualTime = time;
     label = currentLabel;
     [self StartCountDownTimer];
@@ -28,7 +28,7 @@
 #pragma mark count Down Timer
 -(void)InvalidateCountDownTimer
 {
-    countDownTime =actualTime;
+    self.countDownTime =actualTime;
     if (CountDownTimer!=nil)
     {
         if ([CountDownTimer isValid])
@@ -50,16 +50,16 @@
 
 -(void)DecrementCounterValue
 {
-    if (countDownTime>0)
+    if (self.countDownTime>0)
 	{
-         countDownTime--;
-        if (countDownTime<10)
+         self.countDownTime--;
+        if (self.countDownTime<10)
         {
-            label.text=[NSString stringWithFormat:@"0%d:00",countDownTime];
+            label.text=[NSString stringWithFormat:@"0%d:00",self.countDownTime];
         }
         else
         {
-            label.text=[NSString stringWithFormat:@"%d:00",countDownTime];
+            label.text=[NSString stringWithFormat:@"%d:00",self.countDownTime];
         }
        
     }

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CountDownTimerUtility.h"
 
 @interface MJMDareCardView : UIView
 
@@ -15,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 @property (weak, nonatomic) IBOutlet UIButton *photoButton;
+
+@property (nonatomic, strong) NSURL *movieURL;
+@property (nonatomic, strong) CountDownTimerUtility *timer;
 
 - (void)addMovieViewAndPlay:(NSURL *)videoURL;
 

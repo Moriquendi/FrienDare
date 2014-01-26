@@ -9,9 +9,8 @@
 #import "MJMDareCardView.h"
 #import "MJMStyleSheet.h"
 #import <MediaPlayer/MediaPlayer.h>
-#import "CountDownTimerUtility.h"
 
-@interface MJMDareCardView ()
+@interface MJMDareCardView () <CountDownTimerProtocol>
 @property (nonatomic, strong, readwrite) UILabel *prizeAmountLabel;
 @property (nonatomic, strong) MPMoviePlayerController *moviePlayer;
 @end
@@ -44,9 +43,9 @@
         [self.proveButton addSubview:photoLabel];
         
         
-//        self.timerLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, 50)];
-        CountDownTimerUtility *timer = [CountDownTimerUtility new];
-        [timer startCountDownTimerWithTime:123 andUILabel:self.timerLabel];
+        self.timer = [CountDownTimerUtility new];
+        self.timer.delegate = self;
+        [self.timer startCountDownTimerWithTime:123 andUILabel:self.timerLabel];
     }
     return self;
 }
@@ -62,6 +61,15 @@
                                    150);
     [self addSubview:self.moviePlayer.view];
     [self.moviePlayer play];
+}
+
+
+#pragma mark - CountDownTimerUtilityProtocol
+
+- (void)timesUpWithLabel:(UILabel *)label
+{
+    label.hidden = YES;
+    [self addMovieViewAndPlay:self.movieURL];
 }
 
 @end

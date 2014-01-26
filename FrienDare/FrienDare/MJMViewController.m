@@ -66,7 +66,7 @@ UIActionSheetDelegate>
         MJMChallenge *challenge = self.challenges[i];
         MJMDareCardView *dareCard = [[MJMDareCardView alloc] initWithFrame:CGRectMake(0, 0, 250, 360)];
         dareCard.center = CGPointMake(self.view.bounds.size.width/2.f,
-                                      self.view.bounds.size.height/2.f);
+                                      self.view.bounds.size.height/2.f - 66);
         dareCard.frame = CGRectOffset(dareCard.frame, self.view.bounds.size.width * i, 0);
         dareCard.proveButton.tag = i;
         [dareCard.proveButton addTarget:self
@@ -78,9 +78,25 @@ UIActionSheetDelegate>
 
         [allDareCards addObject:dareCard];
         [self.contentScrollView addSubview:dareCard];
+        
+        // Temporary
+        NSURL *movieURL = [[NSBundle mainBundle] URLForResource:[NSString stringWithFormat:@"FrienDare%i", i+1]
+                                                  withExtension:@"mp4"];
+        dareCard.movieURL = movieURL;
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_speedClock:)];
+        tap.numberOfTouchesRequired = 2;
+        [dareCard addGestureRecognizer:tap];
+        
     }
     self.dareCardViews = [NSArray arrayWithArray:allDareCards];
 }
+
+- (void)_speedClock:(UITapGestureRecognizer *)gesture
+{
+    ((MJMDareCardView *)gesture.view).timer.countDownTime -= 10;
+}
+
 
 #pragma mark - MJMViewController
 
