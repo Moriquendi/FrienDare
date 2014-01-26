@@ -35,7 +35,7 @@ UIActionSheetDelegate>
 
 @implementation MJMViewController
 
-- (void)viewDidLoad
+- (void)reloadData
 {
     [super viewDidLoad];
 
@@ -50,7 +50,6 @@ UIActionSheetDelegate>
                                                                              target:self
                                                                              action:@selector(createNewDare:)];
     
-    
     NSFetchRequest *allChallengesRequest = [NSFetchRequest fetchRequestWithEntityName:@"MJMChallenge"];
     NSManagedObjectContext *context = [[MJMCoreDataManager sharedInstance] mainManagedObjectContext];
     NSError *err;
@@ -61,12 +60,16 @@ UIActionSheetDelegate>
     else {
         NSLog(@"Fetch Error: %@", err);
     }
-
-    // Content scroll view
-    self.contentScrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-    self.contentScrollView.pagingEnabled = YES;
     self.contentScrollView.contentSize = CGSizeMake([self.challenges count] * self.view.bounds.size.width, self.view.bounds.size.height);
-    [self.view addSubview:self.contentScrollView];
+    
+    [self _addCardViews];
+}
+
+- (void)_addCardViews
+{
+    for (UIView *view in self.dareCardViews) {
+        [view removeFromSuperview];
+    }
     
     // Add card views
     NSMutableArray *allDareCards = [[NSMutableArray alloc] initWithCapacity:[self.challenges count]];
@@ -89,16 +92,44 @@ UIActionSheetDelegate>
         [self.contentScrollView addSubview:dareCard];
         
         // Temporary
-        NSURL *movieURL = [[NSBundle mainBundle] URLForResource:[NSString stringWithFormat:@"FrienDare%i", i+1]
-                                                  withExtension:@"mp4"];
-        dareCard.movieURL = movieURL;
+        if (!challenge.videoPath) {
+            NSURL *movieURL = [[NSBundle mainBundle] URLForResource:[NSString stringWithFormat:@"FrienDare%i", i+1]
+                                                      withExtension:@"mp4"];
+            challenge.videoPath = [movieURL path];
+            dareCard.movieURL = movieURL;
+        }
+        else {
+            dareCard.movieURL = [NSURL URLWithString:challenge.videoPath];
+        }
         
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_speedClock:)];
         tap.numberOfTouchesRequired = 2;
         [dareCard addGestureRecognizer:tap];
-        
     }
     self.dareCardViews = [NSArray arrayWithArray:allDareCards];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    self.title = @"Dares!";
+    self.view.backgroundColor = [[MJMStyleSheet sharedInstance] backgroundColor];
+    [self.view applyNoiseWithOpacity:0.1];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Go" style:UIBarButtonItemStylePlain target:self action:@selector(createNewDare:)];
+    
+    // Content scroll view
+    self.contentScrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    self.contentScrollView.pagingEnabled = YES;
+    [self.view addSubview:self.contentScrollView];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self reloadData];
 }
 
 - (void)_speedClock:(UITapGestureRecognizer *)gesture
@@ -112,10 +143,10 @@ UIActionSheetDelegate>
 {
     self.selectedChallange = sender.tag;
     
-    [self _addProveImage:[UIImage imageNamed:@"doge"]
-             toChallange:self.challenges[self.selectedChallange]
-                  byUser:[MJMUser currentUser]];
-    return;
+//    [self _addProveImage:[UIImage imageNamed:@"doge"]
+//             toChallange:self.challenges[self.selectedChallange]
+//                  byUser:[MJMUser currentUser]];
+//    return;
     
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                                              delegate:self
@@ -193,7 +224,24 @@ UIActionSheetDelegate>
         
         NSURL *movieURL = [info objectForKey:
                                 UIImagePickerControllerMediaURL];
-        [self _addProveVideo:[NSData dataWithContentsOfURL:movieURL]
+        
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        
+        NSURL *what = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory
+                                                             inDomain:NSUserDomainMask
+                                                    appropriateForURL:nil
+                                                               create:YES
+                                                                error:nil];
+        NSString *documentsDirectory = [what path];
+        NSURL *newURL = [NSURL fileURLWithPath:[documentsDirectory stringByAppendingPathComponent:@"film.MOV"]];
+        
+        NSError *err;
+        [[NSFileManager defaultManager] copyItemAtURL:movieURL
+                                                toURL:newURL
+                                                error:&err];
+        NSLog(@"%@", err);
+        
+        [self _addProveVideo:newURL
                  toChallange:self.challenges[self.selectedChallange]
                       byUser:[MJMUser currentUser]];
     }
@@ -208,10 +256,14 @@ UIActionSheetDelegate>
     // Called when user picked an image
     [self _showCompletedPopup];
 }
-- (void)_addProveVideo:(NSData *)proveImage
+- (void)_addProveVideo:(NSURL *)videoURL
            toChallange:(MJMChallenge *)challange
                 byUser:(MJMUser *)user
 {
+    NSInteger challengeIndex = [self.challenges indexOfObject:challange];
+    challange.videoPath = [videoURL path];
+    [self.dareCardViews[challengeIndex] setMovieURL:videoURL];
+
     // Called when user picked a video
     [self _showCompletedPopup];
 }

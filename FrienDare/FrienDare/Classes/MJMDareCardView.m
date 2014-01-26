@@ -61,6 +61,7 @@
                                    self.frame.size.width,
                                    150);
     [self addSubview:self.moviePlayer.view];
+    [self.moviePlayer prepareToPlay];
     [self.moviePlayer play];
 }
 

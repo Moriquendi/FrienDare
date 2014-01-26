@@ -16,6 +16,7 @@
 @dynamic prizeAmount;
 @dynamic duration;
 @dynamic challengeDescription;
+@dynamic videoPath;
 
 + (instancetype)createOrUpdate:(NSDictionary *)info
 {

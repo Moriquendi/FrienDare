@@ -49,17 +49,11 @@
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
                                                                   style:UIBarButtonItemStyleDone
                                                                  target:self
-                                                                 action:@selector(dismiss:)];
-    
+                                                                 action:@selector(doneButtonTapped:)];
     UINavigationItem *navitem = [super navigationItem];
     navitem.rightBarButtonItem = barButton;
     
     return navitem;
-}
-
-- (void)dismiss:(id)sender
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - View lifecycle
@@ -157,6 +151,8 @@
                                                                  @"duration": duration,
                                                                  @"challengeDescription": challengeDescription
                                                                  }];
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
     }];
 
 }

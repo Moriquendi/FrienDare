@@ -18,5 +18,6 @@
 @property (nonatomic, retain) NSNumber *prizeAmount;
 @property (nonatomic, retain) NSNumber *duration;
 @property (nonatomic, retain) NSString *challengeDescription;
+@property (nonatomic, retain) NSString *videoPath;
 
 @end
