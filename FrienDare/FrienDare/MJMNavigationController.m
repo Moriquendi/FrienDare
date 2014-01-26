@@ -7,6 +7,7 @@
 //
 
 #import "MJMNavigationController.h"
+#import "MJMStyleSheet.h"
 
 @interface MJMNavigationController ()
 
@@ -14,15 +15,10 @@
 
 @implementation MJMNavigationController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        self.navigationBar.backgroundColor = [UIColor colorWithRed:28./255.
-                                                             green:36./255.
-                                                              blue:43./255.
-                                                             alpha:1.];
+    if (self = [super init]) {
+
     }
     return self;
 }
@@ -30,7 +26,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:28./255.
+                                            green:36./255.
+                                             blue:43./255.
+                                            alpha:1.]];
+
+    self.navigationBar.translucent = NO;
+    self.navigationBar.tintColor = [UIColor colorWithWhite:190./255. alpha:1.];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor colorWithWhite:190./255. alpha:1.]}];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
 }
 
 - (void)didReceiveMemoryWarning

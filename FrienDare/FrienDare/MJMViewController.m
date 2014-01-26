@@ -36,7 +36,7 @@ UIActionSheetDelegate>
     [super viewDidLoad];
 
     self.view.backgroundColor = [[MJMStyleSheet sharedInstance] backgroundColor];
-    
+    //
     // Load challenges
     
     NSFetchRequest *allChallengesRequest = [NSFetchRequest fetchRequestWithEntityName:@"MJMChallenge"];
