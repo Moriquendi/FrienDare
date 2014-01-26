@@ -43,15 +43,6 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    self.contentScrollView.delaysContentTouches = NO;
-    self.contentScrollView.contentSize = CGSizeMake(self.contentScrollView.contentSize.width*2, 1000); // dont kill me for this. It's a hackathon guys.c
-    self.contentScrollView.frame = self.view.bounds;
-}
-
 #pragma mark - MJMDareEditVC
 
 - (IBAction)durationSliderDidUpdate:(id)sender
