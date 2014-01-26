@@ -39,13 +39,13 @@
             //NSLog(dares);
             for(id dare in dares){
                 //NSLog((NSString *) dare);
-            MJMChallenge *challenge = [MJMChallenge createOrUpdate:@{@"objID": (NSString *) dare,
-                                                                     @"title": [dares objectForKey:dare][@"title"],
-                                                                     @"prizeAmount": [dares objectForKey:dare][@"prizeAmount"],
-                                                                     @"duration": [dares objectForKey:dare][@"duration"],
-                                                                     @"challengeDescription": [dares objectForKey:dare][@"challengeDescription"]
-                                                                     }];
-                
+//            MJMChallenge *challenge = [MJMChallenge createOrUpdate:@{@"objID": (NSString *) dare,
+//                                                                     @"title": [dares objectForKey:dare][@"title"],
+//                                                                     @"prizeAmount": [dares objectForKey:dare][@"prizeAmount"],
+//                                                                     @"duration": [dares objectForKey:dare][@"duration"],
+//                                                                     @"challengeDescription": [dares objectForKey:dare][@"challengeDescription"]
+//                                                                     }];
+//                
             }
         }];
         

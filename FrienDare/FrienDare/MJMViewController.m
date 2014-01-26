@@ -15,6 +15,7 @@
 
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <Firebase/Firebase.h>
+#import "UIView+JMNoise.h"
 
 @interface MJMViewController () <
 UINavigationControllerDelegate,
@@ -36,6 +37,7 @@ UIActionSheetDelegate>
     [super viewDidLoad];
 
     self.view.backgroundColor = [[MJMStyleSheet sharedInstance] backgroundColor];
+    [self.view applyNoiseWithOpacity:0.1];
     //
     // Load challenges
     

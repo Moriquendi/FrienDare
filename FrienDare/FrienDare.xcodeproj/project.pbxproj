@@ -50,6 +50,7 @@
 		E61FE8EF1893EF0600A2925D /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E61FE8ED1893EF0600A2925D /* Raleway-SemiBold.ttf */; };
 		E61FE8F21894051E00A2925D /* MJMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FE8F11894051E00A2925D /* MJMNavigationController.m */; };
 		E61FE8F418943C7E00A2925D /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E61FE8F318943C7E00A2925D /* fontawesome-webfont.ttf */; };
+		E61FE8F71894BF3100A2925D /* UIView+JMNoise.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FE8F61894BF3100A2925D /* UIView+JMNoise.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,8 @@
 		E61FE8F01894051E00A2925D /* MJMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJMNavigationController.h; sourceTree = "<group>"; };
 		E61FE8F11894051E00A2925D /* MJMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJMNavigationController.m; sourceTree = "<group>"; };
 		E61FE8F318943C7E00A2925D /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		E61FE8F51894BF3100A2925D /* UIView+JMNoise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JMNoise.h"; sourceTree = "<group>"; };
+		E61FE8F61894BF3100A2925D /* UIView+JMNoise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JMNoise.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +246,8 @@
 		902A5B981893A838001D3832 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E61FE8F51894BF3100A2925D /* UIView+JMNoise.h */,
+				E61FE8F61894BF3100A2925D /* UIView+JMNoise.m */,
 				902A5B991893A843001D3832 /* Controllers */,
 				902A5B9D1893C286001D3832 /* Views */,
 				90E6945C18943CD500330948 /* Model */,
@@ -414,6 +419,7 @@
 			files = (
 				90E6945B18943CD300330948 /* MJMChallenge.m in Sources */,
 				E61FE8EB1893E08800A2925D /* MJMStyleSheet.m in Sources */,
+				E61FE8F71894BF3100A2925D /* UIView+JMNoise.m in Sources */,
 				902A5BA61893D409001D3832 /* MJMDareEditVC.m in Sources */,
 				902A5B6D1893A793001D3832 /* main.m in Sources */,
 				902A5B9C1893C284001D3832 /* MJMDareCardView.m in Sources */,
