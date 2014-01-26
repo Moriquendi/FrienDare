@@ -33,7 +33,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="46" id="V98-sb-aJn"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -55,19 +55,19 @@
                     </constraints>
                 </view>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cake on a face" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLI-ut-BHF">
-                    <rect key="frame" x="20" y="127" width="227" height="27"/>
+                    <rect key="frame" x="20" y="127" width="227" height="52"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="27" id="0Vw-Ye-GhM"/>
+                        <constraint firstAttribute="height" constant="52" id="0Vw-Ye-GhM"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Throw a cake and lets rock! Jamie, Maciek and Michal are hacking together and they will be throwing cakes!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="227" translatesAutoresizingMaskIntoConstraints="NO" id="GrN-be-ksZ">
-                    <rect key="frame" x="20" y="162" width="227" height="150"/>
+                    <rect key="frame" x="20" y="187" width="227" height="125"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="150" id="V7s-Zt-8W1"/>
+                        <constraint firstAttribute="height" constant="125" id="V7s-Zt-8W1"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                     <nil key="highlightedColor"/>
@@ -75,8 +75,8 @@
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12:12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uc5-31-9VR">
                     <rect key="frame" x="0.0" y="92" width="267" height="27"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <color key="textColor" red="0.68408203125" green="0.0" blue="0.22031071964310447" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -104,7 +104,9 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="descriptionLabel" destination="GrN-be-ksZ" id="A3B-dH-AfP"/>
                 <outlet property="photoButton" destination="gcY-Xb-He5" id="5RD-5E-J33"/>
+                <outlet property="prizeAmountLabel" destination="bWq-Rd-vCR" id="meZ-jQ-V9h"/>
                 <outlet property="proveButton" destination="gcY-Xb-He5" id="agS-mQ-iMP"/>
                 <outlet property="timerLabel" destination="Uc5-31-9VR" id="K5U-zQ-bxi"/>
                 <outlet property="titleLabel" destination="dLI-ut-BHF" id="AmJ-hq-Wbb"/>

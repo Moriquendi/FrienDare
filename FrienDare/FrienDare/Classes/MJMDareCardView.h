@@ -11,11 +11,12 @@
 
 @interface MJMDareCardView : UIView
 
-@property (nonatomic, strong, readonly) UILabel *prizeAmountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *prizeAmountLabel;
 @property (weak, nonatomic) IBOutlet UIButton *proveButton;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 @property (weak, nonatomic) IBOutlet UIButton *photoButton;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
 @property (nonatomic, strong) NSURL *movieURL;
 @property (nonatomic, strong) CountDownTimerUtility *timer;

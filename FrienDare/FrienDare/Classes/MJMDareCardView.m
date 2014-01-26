@@ -11,7 +11,6 @@
 #import <MediaPlayer/MediaPlayer.h>
 
 @interface MJMDareCardView () <CountDownTimerProtocol>
-@property (nonatomic, strong, readwrite) UILabel *prizeAmountLabel;
 @property (nonatomic, strong) MPMoviePlayerController *moviePlayer;
 @end
 

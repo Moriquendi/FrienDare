@@ -79,8 +79,9 @@ UIActionSheetDelegate>
                        forControlEvents:UIControlEventTouchUpInside];
         
         dareCard.titleLabel.text = challenge.title;
-//        dareCard.descriptionLabel.text = challenge.challengeDescription;
-
+        dareCard.descriptionLabel.text = challenge.challengeDescription;
+        dareCard.prizeAmountLabel.text = [NSString stringWithFormat:@"$%i", [challenge.prizeAmount integerValue]];
+        
         [allDareCards addObject:dareCard];
         [self.contentScrollView addSubview:dareCard];
         
