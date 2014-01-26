@@ -14,6 +14,7 @@
 @interface MJMDareEditVC ()
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextField *priceAmountTextField;
+@property (weak, nonatomic) IBOutlet UILabel *dolarLabel;
 
 
 
@@ -48,9 +49,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Go" style:UIBarButtonItemStylePlain target:self action:@selector(dismissZium:)];
 
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.dolarLabel.text = @"$";
+    self.dolarLabel.font = [UIFont fontWithName:@"Raleway-Light" size:18];
+    self.dolarLabel.alpha = 0.34;
 }
 
 #pragma mark - MJMDareEditVC

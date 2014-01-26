@@ -9,6 +9,7 @@
                 <outlet property="amountLabel" destination="LVM-ei-xgk" id="uWg-Qv-KoJ"/>
                 <outlet property="contentScrollView" destination="c3Y-kE-bpY" id="l6K-p0-8dp"/>
                 <outlet property="descriptionTextField" destination="E9h-We-ysN" id="HVY-Bh-3vh"/>
+                <outlet property="dolarLabel" destination="XSP-rg-gCl" id="oVY-qb-ooe"/>
                 <outlet property="durationLabel" destination="TvK-bP-7Gz" id="8ej-Zh-gGW"/>
                 <outlet property="durationSlider" destination="rUa-Vy-iVW" id="XrJ-fP-mue"/>
                 <outlet property="prizeAmountSlider" destination="Dcd-Jl-dfh" id="bAB-pu-zPp"/>
@@ -95,16 +96,8 @@
                                 <constraint firstAttribute="width" constant="150" id="agT-ec-Yu1"/>
                             </constraints>
                         </view>
-                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollar.png" translatesAutoresizingMaskIntoConstraints="NO" id="1JP-bw-xL4">
-                            <rect key="frame" x="147" y="338" width="26" height="28"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="26" id="JBF-gU-qyk"/>
-                                <constraint firstAttribute="height" constant="28" id="Zie-rM-JPL"/>
-                            </constraints>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock.png" translatesAutoresizingMaskIntoConstraints="NO" id="jQY-Yn-wH9">
-                            <rect key="frame" x="148" y="215" width="25" height="39"/>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="clock.png" translatesAutoresizingMaskIntoConstraints="NO" id="jQY-Yn-wH9">
+                            <rect key="frame" x="148" y="226" width="25" height="39"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="a1S-6K-Rol"/>
@@ -131,10 +124,15 @@
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSP-rg-gCl">
+                            <rect key="frame" x="149" y="346" width="23" height="36"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.74509803921568629" green="0.74509803921568629" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="Dcd-Jl-dfh" firstAttribute="top" secondItem="1JP-bw-xL4" secondAttribute="bottom" constant="8" id="3xp-KI-bh0"/>
                         <constraint firstAttribute="centerX" secondItem="rUa-Vy-iVW" secondAttribute="centerX" id="4MY-kx-Hvb"/>
                         <constraint firstItem="E9h-We-ysN" firstAttribute="top" secondItem="xbt-7c-hD1" secondAttribute="bottom" constant="28" id="8em-f5-PTz"/>
                         <constraint firstItem="MRm-cX-pfl" firstAttribute="leading" secondItem="c3Y-kE-bpY" secondAttribute="leading" id="BGA-jX-NZm"/>
@@ -151,9 +149,7 @@
                         <constraint firstAttribute="centerX" secondItem="xbt-7c-hD1" secondAttribute="centerX" id="c7U-nL-bs5"/>
                         <constraint firstItem="xbt-7c-hD1" firstAttribute="top" secondItem="vWt-DY-T6Q" secondAttribute="bottom" constant="-7" id="ddV-lh-EZc"/>
                         <constraint firstItem="Dcd-Jl-dfh" firstAttribute="leading" secondItem="LVM-ei-xgk" secondAttribute="leading" id="fOh-VV-QPU"/>
-                        <constraint firstItem="1JP-bw-xL4" firstAttribute="top" secondItem="rUa-Vy-iVW" secondAttribute="bottom" constant="43" id="fWX-cf-HkH"/>
                         <constraint firstItem="vWt-DY-T6Q" firstAttribute="top" secondItem="c3Y-kE-bpY" secondAttribute="top" constant="20" id="icz-Qg-Uid"/>
-                        <constraint firstAttribute="centerX" secondItem="1JP-bw-xL4" secondAttribute="centerX" id="j4U-sR-x1k"/>
                         <constraint firstItem="MRm-cX-pfl" firstAttribute="leading" secondItem="c3Y-kE-bpY" secondAttribute="leading" id="nJA-qt-tKY"/>
                         <constraint firstItem="TvK-bP-7Gz" firstAttribute="top" secondItem="rUa-Vy-iVW" secondAttribute="bottom" constant="7" id="vdd-bp-s2D"/>
                         <constraint firstAttribute="trailing" secondItem="MRm-cX-pfl" secondAttribute="trailing" id="vlE-th-CZg"/>
@@ -175,6 +171,5 @@
     </objects>
     <resources>
         <image name="clock.png" width="19" height="19"/>
-        <image name="dollar.png" width="32" height="40"/>
     </resources>
 </document>
